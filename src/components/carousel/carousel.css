@@ -1,0 +1,22 @@
+.parallax-container {
+  overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+  position: relative; /* Posición relativa para poder posicionar elementos hijos absolutamente */
+  height: 400px; /* Ajusta la altura según sea necesario */
+}
+
+.parallax-image {
+  position: absolute; /* Posición absoluta para que las imágenes se superpongan */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 100%; /* Ocupa toda la altura del contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
+  transform: translateY(0); /* Inicialmente no se mueve */
+  transition: transform 0.3s ease-out; /* Transición suave */
+}
+
+.parallax-container:hover .parallax-image {
+  transform: translateY(
+    -50px
+  ); /* Mueve la imagen hacia arriba al pasar el mouse */
+}
