@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-4">About Rise FD</h4>
-            <p>
+            <p className="md:pr-16">
               We are dedicated to providing innovative solutions in software
               development, cybersecurity, and digital marketing. Our mission is
               to empower businesses and individuals with cutting-edge technology

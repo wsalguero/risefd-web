@@ -48,24 +48,17 @@ const Nav = () => {
   return (
     <div className="">
       <nav
-        className={`nav__container ${isMobile ? "nav_mobile" : "nav_desktop"}`}
-        style={
-          isMobile
-            ? {
-                position: "fixed",
-                bottom: visible ? 0 : "-100px",
-                transition: "bottom 0.3s",
-                width: "100%",
-              }
-            : {
-                transform: visible ? "translateY(0)" : "translateY(-100%)",
-                transition: "transform 0.3s ease-in-out",
-                position: "fixed",
-                top: 0,
-                width: "100%",
-                zIndex: 1000,
-              }
-        }
+        className={`nav__container md:py-0 ${
+          isMobile ? "nav_mobile" : "nav_desktop"
+        }`}
+        style={{
+          transform: visible ? "translateY(0)" : "translateY(-100%)",
+          transition: "transform 0.3s ease-in-out",
+          position: "fixed",
+          top: 0,
+          width: "100%",
+          zIndex: 1000,
+        }}
       >
         {!isMobile && (
           <div className="nav__links-list">
@@ -100,7 +93,10 @@ const Nav = () => {
                 className="home_link-a"
                 onClick={() => handleItemClick("home")}
               >
-                <FaHome />
+                <div className="d-flex  align-items-center">
+                  <img src={logoRise} alt="" className="img-fluid logo_img" />
+                  <label htmlFor="">Rise FD</label>
+                </div>
               </Link>{" "}
             </li>
           )}
