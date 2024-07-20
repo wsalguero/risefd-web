@@ -20,6 +20,28 @@ import CustomCarousel from "../../components/carousel/carousel";
 import { carousel_content } from "../../constants/constants";
 import CardWithImgBtn from "../../components/cardWithImgBtn/cardWithImgBtn";
 import { FaBullhorn, FaLock } from "react-icons/fa";
+import CustomCardSlides from "../../components/cards/customCardSlides";
+
+const p1 = `At Rise FD, we specialize in providing expert software consultancy
+              services. Our team of highly skilled professionals is dedicated to
+              delivering innovative and tailored solutions to meet your unique
+              business needs.`;
+const p2 = `Your security is our top priority. We offer comprehensive
+        cybersecurity services to protect your digital assets from
+        threats. Our team is equipped with the latest tools and knowledge
+        to ensure your business remains secure.`;
+const p3 = `Our marketing services are designed to elevate your brand and
+        increase your online presence. We employ innovative strategies
+        that are data-driven and results-oriented, ensuring your marketing
+        efforts are effective and impactful.`;
+const p4 = `We utilize the latest technologies to ensure our solutions are
+        cutting-edge and effective. Our team stays updated with industry
+        trends and advancements, providing you with modern and efficient
+        tools to meet your business needs.`;
+const p5 = `We integrate artificial intelligence into our systems, ensuring
+        your business stays ahead of the curve. Our AI-driven solutions
+        enhance efficiency and provide innovative ways to solve complex
+        problems, aligning your business with the future.`;
 
 const HomeScreen = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -41,7 +63,7 @@ const HomeScreen = () => {
 
   return (
     <main className="HomeScreen__container container md:px-16">
-      <section className="slider__container md:mb-16 mt-16">
+      <section className="slider__container mb-16 mt-16">
         <div className="flex flex-col md:flex-row items-center content pt-16 container md:px-16 space-y-4 md:space-y-0 md:space-x-4">
           {" "}
           {isMobile ? (
@@ -153,21 +175,17 @@ const HomeScreen = () => {
         </div>
       </section>
 
-      <section className="md:px-16">
-        <figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
-          <img
-            class=" md:rounded-none rounded-full mx-auto"
-            src={logoToAbout}
-            alt=""
-          />
-          <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+      <section className="mt-4">
+        <figure className="md:flex bg-slate-100 rounded-xl p-7 md:p-8 md:p-0 dark:bg-slate-800">
+          <img src={logoToAbout} alt="" />
+          <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
             <blockquote>
               <div className="text-neon-container">
                 <h2 className="text-3xl font-bold text-neon mb-4">About Us</h2>
               </div>
 
-              <div className="about_content px-16">
-                <p className="text-white text-lg font-light">
+              <div className="about_content md:px-16">
+                <p className="text-white text-lg font-light md:p-0 p-4">
                   We are a company that emerged from an idea, the idea of
                   providing solutions, tools, and support to people who face
                   daily processes and challenges. Our mission is to help
@@ -180,19 +198,19 @@ const HomeScreen = () => {
                 </p>
               </div>
             </blockquote>
-            <figcaption class="font-medium text-center p-4">
-              <div class="mb-2">
-                <p class="text-2xl italic font-bold text-gray-900 dark:text-gray-100">
-                  Empowering Your Digital Future
+            <figcaption className="font-medium text-center">
+              <div className="mb-2">
+                <p className="md:text-2xl text-xl italic font-bold text-gray-900 dark:text-gray-100 mb-3 md:mb-0">
+                  " Empowering Your Digital Future "
                 </p>
               </div>
-              <div class="text-sky-500 dark:text-sky-400 text-lg">
+              <div className="text-sky-500 dark:text-sky-400 text-lg">
                 ~ William Salguero{" "}
                 <small className="italic text-lg text-sky-600 dark:text-sky-600">
                   ( Wesc/Jadeezz )
                 </small>
               </div>
-              <div class="text-slate-800 dark:text-slate-500 text-md">
+              <div className="text-slate-800 dark:text-slate-500 text-md">
                 CEO & Founder
               </div>
             </figcaption>
@@ -204,129 +222,36 @@ const HomeScreen = () => {
         <div className="text-center pt-16">
           <h2 className="text-3xl font-bold">Why Rise FD?</h2>
         </div>
-        {/* Right img */}
-        <div className="md:flex md:flex-row flex-col-reverse md:justify-between items-center mb-3">
-          <div className="md:w-1/2 p-4">
-            <h3 className="text-xl font-bold mb-2 md:ps-16">
-              Expert Consultancy
-            </h3>
-            <p className="md:ps-16">
-              At Rise FD, we specialize in providing expert software consultancy
-              services. Our team of highly skilled professionals is dedicated to
-              delivering innovative and tailored solutions to meet your unique
-              business needs.
-            </p>
-          </div>
-          <div className="flex justify-center p-4">
-            <img
-              src={img1}
-              alt="Expert Consultancy Icon"
-              className="object-contain home__img-introsection md:pe-16"
-            />
-          </div>
-        </div>
-        {/* Left img */}
-        <div className="md:flex md:flex-row flex-col md:justify-between items-center mb-3">
-          <div className="flex justify-center md:ps-16">
-            <img
-              src={img2}
-              alt="Comprehensive Cybersecurity Icon"
-              className="object-contain home__img-introsection md:pe-16"
-            />
-          </div>
-          <div className="md:w-1/2 p-4">
-            <h3 className="text-xl font-bold mb-2 md:pe-16">
-              Comprehensive Cybersecurity
-            </h3>
-            <p className="md:pe-16">
-              Your security is our top priority. We offer comprehensive
-              cybersecurity services to protect your digital assets from
-              threats. Our team is equipped with the latest tools and knowledge
-              to ensure your business remains secure.
-            </p>
-          </div>
-        </div>
-        {/* Right img */}
-        <div className="md:flex md:flex-row flex-col-reverse md:justify-between items-center mb-3">
-          <div className="md:w-1/2 p-4">
-            <h3 className="text-xl font-bold mb-2 md:ps-16">
-              Innovative Marketing Strategies
-            </h3>
-            <p className="md:ps-16">
-              Our marketing services are designed to elevate your brand and
-              increase your online presence. We employ innovative strategies
-              that are data-driven and results-oriented, ensuring your marketing
-              efforts are effective and impactful.
-            </p>
-          </div>
-          <div className="flex justify-center p-4">
-            <img
-              src={img3}
-              alt="Innovative Marketing Strategies Icon"
-              className="object-contain home__img-introsection md:pe-16"
-            />
-          </div>
-        </div>
-        {/* Left img */}
-        <div className="md:flex md:flex-row flex-col md:justify-between items-center mb-3">
-          <div className="flex justify-center md:ps-16">
-            <img
-              src={img4}
-              alt="Client-Centric Approach Icon"
-              className="object-contain home__img-introsection md:pe-16"
-            />
-          </div>
-          <div className="md:w-1/2 p-4">
-            <h3 className="text-xl font-bold mb-2 md:pe-16">
-              Client-Centric Approach
-            </h3>
-            <p className="md:pe-16">
-              We believe in a client-centric approach, where your needs and
-              goals are our top priority. We work closely with you to understand
-              your business and provide customized solutions that drive results.
-            </p>
-          </div>
-        </div>
-        {/* Right img */}
-        <div className="md:flex md:flex-row flex-col-reverse md:justify-between items-center mb-3">
-          <div className="md:w-1/2 p-4">
-            <h3 className="text-xl font-bold mb-2 md:ps-16">
-              Modern Technologies
-            </h3>
-            <p className="md:ps-16">
-              We utilize the latest technologies to ensure our solutions are
-              cutting-edge and effective. Our team stays updated with industry
-              trends and advancements, providing you with modern and efficient
-              tools to meet your business needs.
-            </p>
-          </div>
-          <div className="flex justify-center p-4">
-            <img
-              src={img4}
-              alt="Modern Technologies Icon"
-              className="object-contain home__img-introsection md:pe-16"
-            />
-          </div>
-        </div>
-        {/* Left img */}
-        <div className="md:flex md:flex-row flex-col md:justify-between items-center mb-3">
-          <div className="flex justify-center md:ps-16">
-            <img
-              src={img3}
-              alt="AI Integration Icon"
-              className="object-contain home__img-introsection md:pe-16"
-            />
-          </div>
-          <div className="md:w-1/2 p-4">
-            <h3 className="text-xl font-bold mb-2 md:pe-16">AI Integration</h3>
-            <p className="md:pe-16">
-              We integrate artificial intelligence into our systems, ensuring
-              your business stays ahead of the curve. Our AI-driven solutions
-              enhance efficiency and provide innovative ways to solve complex
-              problems, aligning your business with the future.
-            </p>
-          </div>
-        </div>
+        <CustomCardSlides
+          title={"Expert Consultancy"}
+          img={img1}
+          layout={"left"}
+          parraf={p1}
+        />
+        <CustomCardSlides
+          title={"Comprehensive Cybersecurity"}
+          img={img2}
+          layout={"right"}
+          parraf={p2}
+        />
+        <CustomCardSlides
+          title={"Innovative Marketing Strategies"}
+          img={img3}
+          layout={"left"}
+          parraf={p3}
+        />
+        <CustomCardSlides
+          title={"Modern Technologies"}
+          img={img4}
+          layout={"right"}
+          parraf={p4}
+        />
+        <CustomCardSlides
+          title={"AI Integration"}
+          img={img3}
+          layout={"left"}
+          parraf={p5}
+        />
       </section>
     </main>
   );

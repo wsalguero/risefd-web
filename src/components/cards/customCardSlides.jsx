@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-const CustomCardSlides = ({ layout }) => {
+const CustomCardSlides = ({ layout, img, title, parraf }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,14 +20,61 @@ const CustomCardSlides = ({ layout }) => {
     };
   }, []);
   return (
-    <section>
-      <div className={`card-deck ${layout}`}>{/* Slides go here */}</div>
-    </section>
+    <div
+      className={`${
+        layout === "left"
+          ? "md:flex md:flex-row flex-col md:justify-between items-center mb-3"
+          : "md:flex md:flex-row flex-col-reverse md:justify-between items-center mb-3"
+      }`}
+    >
+      {!isMobile && layout === "left" ? (
+        <div className="flex justify-center md:ps-16 order-first md:order-last">
+          <img
+            src={img}
+            alt={title}
+            className="object-contain home__img-introsection md:pe-16"
+          />
+        </div>
+      ) : (
+        ""
+      )}
+      <div className="md:w-1/2 p-4">
+        <h3 className="text-xl font-bold mb-2 md:ps-16">{title}</h3>
+        <p className="md:pe-16">{parraf}</p>
+      </div>
+      {isMobile ? (
+        <div
+          className={`flex justify-center md:ps-16 order-first md:order-last`}
+        >
+          <img
+            src={img}
+            alt="AI Integration Icon"
+            className="object-contain home__img-introsection md:pe-16"
+          />
+        </div>
+      ) : (
+        ""
+      )}
+      {!isMobile && layout === "right" ? (
+        <div className="flex justify-center p-4 order-last md:order-first">
+          <img
+            src={img}
+            alt={title}
+            className="object-contain home__img-introsection md:pe-16"
+          />
+        </div>
+      ) : (
+        ""
+      )}
+    </div>
   );
 };
 
 CustomCardSlides.propTypes = {
   layout: PropTypes.string, // "grid" or "columns"
+  img: PropTypes.string, // URL of the image to be displayed
+  title: PropTypes.string, // Title of the card
+  parraf: PropTypes.string, // Content of the card
 };
 
 export default CustomCardSlides;

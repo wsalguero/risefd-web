@@ -149,3 +149,10 @@
   position: relative;
   display: inline-block;
 }
+
+@media (max-width: 768px) {
+  .flex-row,
+  .flex-row-reverse {
+    flex-direction: column-reverse;
+  }
+}
