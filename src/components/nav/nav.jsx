@@ -1,19 +1,19 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logoRise from "../../assets/images/logos/transparent.png";
 
-import "./nav.css";
-import { FaArrowCircleUp, FaHome, FaServer } from "react-icons/fa";
-import { RiTeamLine } from "react-icons/ri";
+import { FaArrowCircleUp, FaServer } from "react-icons/fa";
 import { MdContactMail } from "react-icons/md";
 import { Dropdown } from "react-bootstrap";
+
+import "./nav.css";
 
 const Nav = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
-  const [activeItem, setActiveItem] = useState("home"); // Estado para el ítem activo
+  const location = useLocation(); // Hook para obtener la ubicación actual
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,8 +41,8 @@ const Nav = () => {
     };
   }, [prevScrollPos, isMobile]);
 
-  const handleItemClick = (item) => {
-    setActiveItem(item); // Actualiza el estado del ítem activo al hacer clic
+  const getActiveClass = (path) => {
+    return location.pathname === path ? "active_nav" : "";
   };
 
   return (
@@ -62,16 +62,8 @@ const Nav = () => {
       >
         {!isMobile && (
           <div className="nav__links-list">
-            <div
-              className={`nav__links ${
-                activeItem === "home" ? "active_nav" : ""
-              }`}
-            >
-              <Link
-                to="/"
-                id="home_url"
-                onClick={() => handleItemClick("home")}
-              >
+            <div className={`nav__links ${getActiveClass("/")}`}>
+              <Link to="/" id="home_url">
                 <div className="d-flex  align-items-center">
                   <img src={logoRise} alt="" className="img-fluid logo_img" />
                   <label htmlFor="">Rise FD</label>
@@ -82,39 +74,22 @@ const Nav = () => {
         )}
         <section className="nav__links-list">
           {isMobile && (
-            <li
-              className={`nav__links ${
-                activeItem === "home" ? "active_nav" : ""
-              }`}
-            >
-              {" "}
-              <Link
-                to="/"
-                className="home_link-a"
-                onClick={() => handleItemClick("home")}
-              >
+            <li className={`nav__links ${getActiveClass("/")}`}>
+              <Link to="/" className="home_link-a">
                 <div className="d-flex  align-items-center">
                   <img src={logoRise} alt="" className="img-fluid logo_img" />
                   <label htmlFor="">Rise FD</label>
                 </div>
-              </Link>{" "}
+              </Link>
             </li>
           )}
-          <li
-            className={`nav__links ${
-              activeItem === "contact" ? "active_nav" : ""
-            }`}
-          >
-            <Link to="/contact" onClick={() => handleItemClick("contact")}>
+          <li className={`nav__links ${getActiveClass("/contact")}`}>
+            <Link to="/contact">
               {!isMobile && "Contact Us"} {isMobile && <MdContactMail />}
             </Link>
           </li>
-          <li
-            className={`nav__links ${
-              activeItem === "blog" ? "active_nav" : ""
-            }`}
-          >
-            <Link to="/blog" onClick={() => handleItemClick("blog")}>
+          <li className={`nav__links ${getActiveClass("/blog")}`}>
+            <Link to="/blog">
               {!isMobile && "Rise Blog"} {isMobile && <FaArrowCircleUp />}
             </Link>
           </li>
@@ -122,7 +97,7 @@ const Nav = () => {
             <Dropdown drop="up">
               <Dropdown.Toggle
                 className={`bg-purple-900 border-none ${
-                  activeItem === "services"
+                  getActiveClass("/services")
                     ? "bg-purple-700 text-white"
                     : "text-white"
                 }`}
@@ -135,7 +110,6 @@ const Nav = () => {
                 <Dropdown.Item
                   as={Link}
                   to="/services/service1"
-                  onClick={() => handleItemClick("service1")}
                   className="text-white hover:bg-purple-700"
                 >
                   Service 1
@@ -143,7 +117,6 @@ const Nav = () => {
                 <Dropdown.Item
                   as={Link}
                   to="/services/service2"
-                  onClick={() => handleItemClick("service2")}
                   className="text-white hover:bg-purple-700"
                 >
                   Service 2
@@ -151,7 +124,6 @@ const Nav = () => {
                 <Dropdown.Item
                   as={Link}
                   to="/services/service3"
-                  onClick={() => handleItemClick("service3")}
                   className="text-white hover:bg-purple-700"
                 >
                   Service 3
@@ -162,9 +134,9 @@ const Nav = () => {
             <Dropdown>
               <Dropdown.Toggle
                 className={`bg-purple-900 border-none ${
-                  activeItem === "services"
+                  getActiveClass("/services")
                     ? "bg-purple-700 text-white"
-                    : "text-white bg-purple-900 "
+                    : "text-white bg-purple-900"
                 }`}
                 id="dropdown-basic"
               >
@@ -175,23 +147,20 @@ const Nav = () => {
                 <Dropdown.Item
                   as={Link}
                   to="/services/service1"
-                  onClick={() => handleItemClick("service1")}
                   className="text-white hover:bg-purple-700"
                 >
-                  Software Develompent
+                  Software Development
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
                   to="/services/service2"
-                  onClick={() => handleItemClick("service2")}
                   className="text-white hover:bg-purple-700"
                 >
-                  Maketing Services
+                  Marketing Services
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
                   to="/services/service3"
-                  onClick={() => handleItemClick("service3")}
                   className="text-white hover:bg-purple-700"
                 >
                   Our Products
