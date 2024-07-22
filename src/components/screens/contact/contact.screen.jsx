@@ -79,7 +79,7 @@ const ContactScreen = () => {
   return (
     <main className="md:px-16">
       <section className="mb-16 mt-16">
-        <div className="flex justify-center items-center md:pt-16">
+        <div className="md:flex md:justify-center items-center md:pt-16">
           <form ref={form} onSubmit={sendEmail} className="w-full max-w-lg">
             <div className="mb-4">
               <label
@@ -173,6 +173,7 @@ const ContactScreen = () => {
               </button>
             </div>
           </form>
+          <div className=""></div>
         </div>
       </section>
     </main>
