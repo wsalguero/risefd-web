@@ -15,8 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout_main />}>
             <Route path="/" element={<HomeScreen />} />
-            <Route path="contact" element={<ContactScreen />} />
-            <Route path="services" element={<ServicesScreen />} />
+            <Route path="/contact" element={<ContactScreen />} />
+            <Route path="/services" element={<ServicesScreen />} />
             <Route path="*" element={<Not_foundScreen />} />
             <Route path="" element={<ServicesScreen />} />
           </Route>
