@@ -4,23 +4,23 @@
 import React, { useEffect, useState } from "react";
 
 // images
-import home_img from "../../assets/images/others/home-main-img.webp";
-import iconSass from "../../assets/images/icons/iconSass.webp";
-import img1 from "../../assets/images/others/img_rise_web.png";
-import img2 from "../../assets/images/others/img_rise_web_2.png";
-import img3 from "../../assets/images/others/img rise web ia.png";
-import img4 from "../../assets/images/others/img rise web 3.png";
-import logoToAbout from "../../assets/images/logos/transparent.png";
+import home_img from "../../../assets/images/others/home-main-img.webp";
+import iconSass from "../../../assets/images/icons/iconSass.webp";
+import img1 from "../../../assets/images/others/img_rise_web.png";
+import img2 from "../../../assets/images/others/img_rise_web_2.png";
+import img3 from "../../../assets/images/others/img rise web ia.png";
+import img4 from "../../../assets/images/others/img rise web 3.png";
+import logoToAbout from "../../../assets/images/logos/transparent.png";
 
 import "./home.screen.css";
-import CustomCarrousel from "../../components/carousel/carousel";
+import CustomCarrousel from "../../carousel/carousel";
 import { Link, Navigate } from "react-router-dom";
-import CustomCard from "../../components/cards/customCard";
-import CustomCarousel from "../../components/carousel/carousel";
-import { carousel_content } from "../../constants/constants";
-import CardWithImgBtn from "../../components/cardWithImgBtn/cardWithImgBtn";
+import CustomCard from "../../cards/customCard";
+import CustomCarousel from "../../carousel/carousel";
+import { carousel_content } from "../../../constants/constants";
+import CardWithImgBtn from "../../cardWithImgBtn/cardWithImgBtn";
 import { FaBullhorn, FaLock } from "react-icons/fa";
-import CustomCardSlides from "../../components/cards/customCardSlides";
+import CustomCardSlides from "../../cards/customCardSlides";
 
 const p1 = `At Rise FD, we specialize in providing expert software consultancy
               services. Our team of highly skilled professionals is dedicated to
