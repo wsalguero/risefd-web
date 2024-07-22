@@ -5,7 +5,7 @@ import logoRise from "../../assets/images/logos/transparent.png";
 
 import { FaArrowCircleUp, FaServer } from "react-icons/fa";
 import { MdContactMail } from "react-icons/md";
-import { Dropdown } from "react-bootstrap";
+import { Button, ButtonGroup, Dropdown } from "react-bootstrap";
 
 import "./nav.css";
 
@@ -94,74 +94,84 @@ const Nav = () => {
             </Link>
           </li>
           {isMobile ? (
-            <Dropdown drop="up">
+            <Dropdown drop="up" as={ButtonGroup}>
+              <Button className="btn bg-purple-700 text-white">
+                <FaServer />
+              </Button>
+
               <Dropdown.Toggle
-                className={`bg-purple-900 border-none ${
+                className={`bg-purple-700 border-none ${
                   getActiveClass("/services")
                     ? "bg-purple-700 text-white"
                     : "text-white"
                 }`}
                 id="dropdown-basic"
-              >
-                Services <FaServer />
-              </Dropdown.Toggle>
+              ></Dropdown.Toggle>
 
-              <Dropdown.Menu className="bg-purple-800">
+              <Dropdown.Menu className="bg-purple-100">
                 <Dropdown.Item
                   as={Link}
                   to="/services/service1"
-                  className="text-white hover:bg-purple-700"
+                  className="text-black hover:bg-purple-700"
                 >
                   Service 1
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
                   to="/services/service2"
-                  className="text-white hover:bg-purple-700"
+                  className="text-black hover:bg-purple-700"
                 >
                   Service 2
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
                   to="/services/service3"
-                  className="text-white hover:bg-purple-700"
+                  className="text-black hover:bg-purple-700"
                 >
                   Service 3
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           ) : (
-            <Dropdown>
+            <Dropdown as={ButtonGroup}>
+              <Button
+                className={`bg-purple-700 border-none ${
+                  getActiveClass("/services")
+                    ? "bg-purple-700 text-white"
+                    : "text-white bg-purple-900"
+                }`}
+              >
+                Our Services
+              </Button>
+
               <Dropdown.Toggle
-                className={`bg-purple-900 border-none ${
+                className={`bg-purple-700 border-none ${
                   getActiveClass("/services")
                     ? "bg-purple-700 text-white"
                     : "text-white bg-purple-900"
                 }`}
                 id="dropdown-basic"
-              >
-                {!isMobile && "Services"} {isMobile && <FaServer />}
-              </Dropdown.Toggle>
+              ></Dropdown.Toggle>
 
-              <Dropdown.Menu className="bg-purple-800">
+              <Dropdown.Menu className="bg-purple-400">
                 <Dropdown.Item
                   as={Link}
                   to="/services/service1"
-                  className="text-white hover:bg-purple-700"
+                  className="text-black hover:bg-purple-700"
                 >
                   Software Development
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
                   to="/services/service2"
-                  className="text-white hover:bg-purple-700"
+                  className="text-black hover:bg-purple-700"
                 >
                   Marketing Services
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
                   to="/services/service3"
-                  className="text-white hover:bg-purple-700"
+                  className="text-black hover:bg-purple-700"
                 >
                   Our Products
                 </Dropdown.Item>

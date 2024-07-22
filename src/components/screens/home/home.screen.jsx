@@ -4,8 +4,6 @@
 import React, { useEffect, useState } from "react";
 
 // images
-import home_img from "../../../assets/images/others/home-main-img.webp";
-import iconSass from "../../../assets/images/icons/iconSass.webp";
 import img1 from "../../../assets/images/others/img_rise_web.png";
 import img2 from "../../../assets/images/others/img_rise_web_2.png";
 import img3 from "../../../assets/images/others/img rise web ia.png";
@@ -13,12 +11,8 @@ import img4 from "../../../assets/images/others/img rise web 3.png";
 import logoToAbout from "../../../assets/images/logos/transparent.png";
 
 import "./home.screen.css";
-import CustomCarrousel from "../../carousel/carousel";
-import { Link, Navigate } from "react-router-dom";
-import CustomCard from "../../cards/customCard";
 import CustomCarousel from "../../carousel/carousel";
 import { carousel_content } from "../../../constants/constants";
-import CardWithImgBtn from "../../cardWithImgBtn/cardWithImgBtn";
 import { FaBullhorn, FaLock } from "react-icons/fa";
 import CustomCardSlides from "../../cards/customCardSlides";
 
