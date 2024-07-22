@@ -6,7 +6,7 @@ import {
   HomeScreen,
   Not_foundScreen,
   ServicesScreen,
-} from "./screens";
+} from "./components/screens";
 
 function App() {
   return (
