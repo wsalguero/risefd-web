@@ -160,7 +160,7 @@ const ContactScreen = () => {
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="from_name"
           >
-            willsalguero02@gmail.com willsalguero02@gmail.com Name
+            Name
             <small className="text-red-800">*</small>
           </label>
           <input
