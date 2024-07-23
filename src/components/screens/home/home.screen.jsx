@@ -183,7 +183,7 @@ const HomeScreen = () => {
                 <h2 className="text-3xl font-bold text-neon mb-4">About Us</h2>
               </div>
 
-              <div className="about_content md:px-16">
+              <div className="about_content">
                 <p className="text-white text-lg font-light md:p-0 p-4">
                   We are a company that emerged from an idea, the idea of
                   providing solutions, tools, and support to people who face

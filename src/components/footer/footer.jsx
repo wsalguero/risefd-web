@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -56,7 +57,7 @@ const Footer = () => {
                 href="https://x.com/rise_fd_devs"
                 className="text-white hover:text-purple-300"
               >
-                <FaTwitter size={24} />
+                <FaXTwitter size={24} />
               </a>
               <a href="#" className="text-white hover:text-purple-300">
                 <FaLinkedin size={24} />
