@@ -175,7 +175,7 @@ const HomeScreen = () => {
       </section>
 
       <section className="mt-4 md:px-16">
-        <figure className="md:flex bg-slate-100 rounded-xl p-7 md:p-8 md:p-0 dark:bg-slate-800">
+        <figure className="md:flex bg-slate-100 rounded-xl p-7 md:p-8 md:p-0 bg-slate-800">
           <img src={logoToAbout} alt="" />
           <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
             <blockquote>
