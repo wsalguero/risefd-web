@@ -95,8 +95,16 @@ const Nav = () => {
           </li>
           {isMobile ? (
             <Dropdown drop="up" as={ButtonGroup}>
-              <Button className="btn bg-purple-700 text-white">
-                <FaServer />
+              <Button
+                className={`bg-purple-700 border-none ${
+                  getActiveClass("/services")
+                    ? "bg-purple-700 text-white"
+                    : "text-white bg-purple-900"
+                }`}
+                as={Link}
+                to="/services"
+              >
+                <FaServer />{" "}
               </Button>
 
               <Dropdown.Toggle
@@ -140,6 +148,8 @@ const Nav = () => {
                     ? "bg-purple-700 text-white"
                     : "text-white bg-purple-900"
                 }`}
+                as={Link}
+                to="/services"
               >
                 Our Services
               </Button>

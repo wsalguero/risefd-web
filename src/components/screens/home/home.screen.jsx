@@ -57,7 +57,7 @@ const HomeScreen = () => {
 
   return (
     <main className="HomeScreen__container container md:px-16">
-      <section className="slider__container mb-16 mt-16">
+      <section className="slider__container mb-16 mt-16 md:px-16">
         <div className="flex flex-col md:flex-row items-center content pt-16 container md:px-16 space-y-4 md:space-y-0 md:space-x-4">
           {" "}
           {isMobile ? (
@@ -169,7 +169,7 @@ const HomeScreen = () => {
         </div>
       </section>
 
-      <section className="mt-4">
+      <section className="mt-4 md:px-16">
         <figure className="md:flex bg-slate-100 rounded-xl p-7 md:p-8 md:p-0 dark:bg-slate-800">
           <img src={logoToAbout} alt="" />
           <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
@@ -212,7 +212,7 @@ const HomeScreen = () => {
         </figure>
       </section>
 
-      <section className="container py-16">
+      <section className="container py-16 md:px-16">
         <div className="text-center pt-16">
           <h2 className="text-3xl font-bold">Why Rise FD?</h2>
         </div>

@@ -9,8 +9,13 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaLinkedin,
+  FaMailBulk,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+
+import "./contact.screen.css";
+import { CiMail } from "react-icons/ci";
 
 const ContactScreen = () => {
   const form = useRef();
@@ -20,6 +25,7 @@ const ContactScreen = () => {
   const serviceOptions = [
     { value: "cybersecurity", label: "Cybersecurity" },
     { value: "software_development", label: "Software Development" },
+    { value: "app_development", label: "Apps Development" },
     { value: "digital_marketing", label: "Digital Marketing" },
   ];
 
@@ -100,160 +106,151 @@ const ContactScreen = () => {
   }, []);
   return (
     <main className="md:px-16 container md:px-16 px-6">
-      <section className="mb-16 mt-16">
-        <div className="md:flex md:justify-center items-center md:pt-16">
-          <div className="md:px-16">
-            <div>
-              <h2 className="text-3xl font-bold mb-4 pt-16 md:pt-0">
-                Contact Us
-              </h2>
-              <p className="text-gray-900 text-lg">
-                We'd love to hear from you. Please fill out the form
-                {isMobile ? <>&nbsp;below </> : <>&nbsp;</>}and we'll get back
-                to you soon.
+      <section className="mb-16 mt-16 md:px-16">
+        <div className="items-center md:pt-16">
+          <div className="parallax-container md:px-16 mt-5">
+            <div className="content">
+              <h1 className={`text-3xl md:text-4xl font-bold  home-title-bann`}>
+                Rise Begins with a Conversation{" "}
+              </h1>
+              <p className="text-lg md:text-xl text-gray-500 mb-6">
+                Let's discuss your vision and make it a reality.{" "}
               </p>
-              <p className="text-gray-700 text-lg mt-4">
-                You can visit our social networks to learn more about our
-                projects, services and about us.
-              </p>
-              <div className="flex justify-center mt-4">
-                <a
-                  href="https://www.facebook.com/yourpage"
-                  target="_blank"
-                  className="text-blue-600 hover:text-blue-800 mr-4 h1"
-                  rel="noreferrer"
-                >
-                  <FaFacebookSquare />
-                </a>
-                <a
-                  href="https://www.instagram.com/yourpage"
-                  target="_blank"
-                  className="text-pink-600 hover:text-pink-800 mr-4 h1"
-                  rel="noreferrer"
-                >
-                  <FaInstagramSquare />
-                </a>
-                <a
-                  href="https://www.twitter.com/yourpage"
-                  target="_blank"
-                  className="text-black-400 hover:text-black-600 mr-4 h1"
-                  rel="noreferrer"
-                >
-                  <FaXTwitter />
-                </a>
-                <a
-                  href="https://www.linkedin.com/yourpage"
-                  target="_blank"
-                  className="text-blue-800 hover:text-blue-900 h1"
-                  rel="noreferrer"
-                >
-                  <FaLinkedin />
-                </a>
+              <div className="md:flex justify-center mt-4">
+                <div className="group relative mr-4">
+                  <button className="text-shadow ">
+                    <FaWhatsapp className="text-shadow w-8 h-8 hover:scale-125 duration-200 hover:text-green-500" />
+                  </button>
+                  <span
+                    className="absolute top-14 left-[50%] -translate-x-[50%] 
+                  z-20 origin-left scale-0 px-3 rounded-lg border 
+                  border-gray-300 bg-white py-2 text-sm font-bold
+                  shadow-md transition-all duration-300 ease-in-out 
+                  group-hover:scale-100 text-black"
+                  >
+                    (+502) 5583-6903
+                  </span>
+                </div>
+                <div className="group relative ">
+                  <button>
+                    <CiMail className="text-shadow w-8 h-8 hover:scale-125 duration-200 hover:text-blue-500" />
+                  </button>
+                  <span
+                    className="absolute top-14 left-[50%] -translate-x-[50%] 
+                  z-20 origin-left scale-0 px-3 rounded-lg border 
+                  border-gray-300 bg-white py-2 text-sm font-bold
+                  shadow-md transition-all duration-300 ease-in-out 
+                  group-hover:scale-100 text-black"
+                  >
+                    risefuncdev@gmail.com
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            className="w-full max-w-lg px-2 py-4 md:py-0 mt-4 md:mt-0"
-          >
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="from_name"
-              >
-                Name<small className="text-red-800">*</small>
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="from_name"
-                type="text"
-                placeholder="Your name"
-                name="from_name"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="from_email"
-              >
-                Email <small className="text-red-800">*</small>
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="from_email"
-                type="email"
-                placeholder="Your email"
-                name="from_email"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="phone_number"
-              >
-                Phone Number <small className="text-red-800">*</small>
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="phone_number"
-                type="text"
-                placeholder="Your phone number"
-                name="phone_number"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="service"
-              >
-                Service of Interest <small className="text-red-800">*</small>
-              </label>
-              <Select
-                id="service"
-                name="service_of_interest"
-                options={serviceOptions}
-                className="basic-single"
-                classNamePrefix="select"
-                placeholder="Select a service"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="message"
-              >
-                Message <small className="text-zinc-100">(optional)</small>
-              </label>
-              <textarea
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="message"
-                placeholder="Your message"
-                name="message"
-              />
-            </div>
-            <div className="mb-4 d-none">
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey="6LcXABYqAAAAAGv8CTGIzPPL1tEH_q7YR5UfEqRB" // reemplaza con tu clave de sitio
-                onChange={onReCAPTCHAChange}
-              />
-            </div>
-            <div className="flex items-center justify-between">
-              <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="submit"
-              >
-                Send
-              </button>
-            </div>
-          </form>
         </div>
       </section>
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="w-full max-w-lg px-2 py-4 md:py-0 mt-4 md:mt-0"
+      >
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="from_name"
+          >
+            willsalguero02@gmail.com willsalguero02@gmail.com Name
+            <small className="text-red-800">*</small>
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="from_name"
+            type="text"
+            placeholder="Your name"
+            name="from_name"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="from_email"
+          >
+            Email <small className="text-red-800">*</small>
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="from_email"
+            type="email"
+            placeholder="Your email"
+            name="from_email"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="phone_number"
+          >
+            Phone Number <small className="text-red-800">*</small>
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="phone_number"
+            type="text"
+            placeholder="Your phone number"
+            name="phone_number"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="service"
+          >
+            Service of Interest <small className="text-red-800">*</small>
+          </label>
+          <Select
+            id="service"
+            name="service_of_interest"
+            options={serviceOptions}
+            className="basic-single"
+            classNamePrefix="select"
+            placeholder="Select a service"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="message"
+          >
+            Message <small className="text-zinc-100">(optional)</small>
+          </label>
+          <textarea
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="message"
+            placeholder="Your message"
+            name="message"
+          />
+        </div>
+        <div className="mb-4 d-none">
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey="6LcXABYqAAAAAGv8CTGIzPPL1tEH_q7YR5UfEqRB" // reemplaza con tu clave de sitio
+            onChange={onReCAPTCHAChange}
+          />
+        </div>
+        <div className="flex items-center justify-between">
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Send
+          </button>
+        </div>
+      </form>
     </main>
   );
 };

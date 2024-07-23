@@ -43,19 +43,28 @@ const Footer = () => {
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-4">Contact Information</h4>
-            <p>Email: info@risefd.com</p>
-            <p>Phone: +123-456-7890</p>
+            <p>Email: risefuncdev@gmail.com</p>
+            <p>Phone:(+502) 5583-6903</p>
             <div className="flex space-x-4 mt-4">
-              <a href="#" className="text-white hover:text-purple-300">
+              <a
+                href="https://www.facebook.com/risefuncdev"
+                className="text-white hover:text-purple-300"
+              >
                 <FaFacebook size={24} />
               </a>
-              <a href="#" className="text-white hover:text-purple-300">
+              <a
+                href="https://x.com/rise_fd_devs"
+                className="text-white hover:text-purple-300"
+              >
                 <FaTwitter size={24} />
               </a>
               <a href="#" className="text-white hover:text-purple-300">
                 <FaLinkedin size={24} />
               </a>
-              <a href="#" className="text-white hover:text-purple-300">
+              <a
+                href="https://www.instagram.com/rise.dev/"
+                className="text-white hover:text-purple-300"
+              >
                 <FaInstagram size={24} />
               </a>
             </div>

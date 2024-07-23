@@ -11,7 +11,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="" element={<Services />} />
+          <Route path="/services" element={<Services />}>
+            <Route path="/services/cybersecurity" element={<Services />} />
+          </Route>
           <Route path="*" element={<Not_foundScreen />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
