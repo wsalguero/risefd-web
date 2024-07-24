@@ -7,8 +7,8 @@ import CustomCard from "../../cards/customCard";
 
 const ServicesScreen = () => {
   return (
-    <main className="container md:px-16">
-      <section className="md:px-16 mb-16 mt-16 md:pt-12">
+    <main className="md:px-16 container md:px-16 px-6 mb-5">
+      <section className="mb-16 mt-16 md:px-16 pt-12">
         <div className="parallax-container-services md:px-16 mt-5">
           <div className="content">
             <h1 className="text-3xl md:text-4xl font-bold home-title-bann">
@@ -34,7 +34,7 @@ const ServicesScreen = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ps-4 md:ps-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ps-2 md:ps-0">
           <div>
             <div className="card-main-service shadow">
               <p className="card-title">Cybersecurity</p>
@@ -50,7 +50,7 @@ const ServicesScreen = () => {
                 <div className="go-arrow">→</div>
               </div>
             </div>
-            <div className="pt-4 md:pl-20">
+            <div className="pt-4 pl-24 md:pl-20">
               <Link to={"/services/cybersecurity"}>
                 <button className="btn-seemore-services">
                   <span className="btn-text-one">See More</span>
@@ -74,7 +74,7 @@ const ServicesScreen = () => {
                 <div className="go-arrow">→</div>
               </div>
             </div>
-            <div className="pt-4 md:pl-20">
+            <div className="pt-4 pl-24 md:pl-20">
               <Link to={"/services/development"}>
                 <button className="btn-seemore-services">
                   <span className="btn-text-one">See More</span>
@@ -100,7 +100,7 @@ const ServicesScreen = () => {
                 <div className="go-arrow">→</div>
               </div>
             </div>
-            <div className="pt-4 md:pl-20">
+            <div className="pt-4 pl-24 md:pl-20">
               <Link to={"/services/digital-marketing"}>
                 <button className="btn-seemore-services">
                   <span className="btn-text-one">See More</span>
@@ -125,7 +125,7 @@ const ServicesScreen = () => {
             to succeed in a competitive landscape.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pl-14 md:pl-0">
           <CustomCard
             wave_color="bg-green-500"
             title={"Hi-P"}

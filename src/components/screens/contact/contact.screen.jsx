@@ -163,17 +163,18 @@ const ContactScreen = () => {
       </section>
       <section className="md:flex md:justify-center">
         <div className="">
-          <div className="text-center py-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Social Media
+          <div className="md:px-20 text-center">
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+              Stay Connected with Rise FD
             </h1>
             <p className="text-lg text-gray-700 mb-8">
               Follow us on our social media platforms to stay updated with our
-              latest projects, services, and news.
+              latest projects, services, and news. Join our community and be
+              part of our journey towards innovation and excellence.
             </p>
           </div>
 
-          <div className="flex justify-center align-bottom">
+          <div className="flex justify-center align-bottom mb-4">
             <div className="main">
               <div className="up">
                 <a
@@ -240,120 +241,136 @@ const ContactScreen = () => {
             </div>
           </div>
         </div>
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="w-full max-w-lg px-2 py-4 md:py-0 mt-4 md:mt-0 ml-0 md:ml-16 bg-violet-300 rounded shadow"
-        >
-          <div className="mb-4 px-2">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="from_name"
-            >
-              Name
-              <small className="text-red-800">*</small>
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="from_name"
-              type="text"
-              placeholder="Your name"
-              name="from_name"
-              required
-            />
-          </div>
-          <div className="mb-4 px-2">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="from_email"
-            >
-              Email <small className="text-red-800">*</small>
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="from_email"
-              type="email"
-              placeholder="Your email"
-              name="from_email"
-              required
-            />
-          </div>
-          <div className="mb-4 px-2">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="phone_number"
-            >
-              Phone Number <small className="text-red-800">*</small>
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="phone_number"
-              type="text"
-              placeholder="Your phone number"
-              name="phone_number"
-              required
-            />
-          </div>
-          <div className="mb-4 px-2">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="service"
-            >
-              Service of Interest <small className="text-red-800">*</small>
-            </label>
-            <Select
-              id="service"
-              name="service_of_interest"
-              options={serviceOptions}
-              className="basic-single"
-              classNamePrefix="select"
-              placeholder="Select a service"
-              required
-            />
-          </div>
-          <div className="mb-4 px-2">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="message"
-            >
-              Message <small className="text-stone-600">(optional)</small>
-            </label>
-            <textarea
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="message"
-              placeholder="Your message"
-              name="message"
-            />
-          </div>
-          <div className="mb-4 d-none">
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              sitekey="6LcXABYqAAAAAGv8CTGIzPPL1tEH_q7YR5UfEqRB" // reemplaza con tu clave de sitio
-              onChange={onReCAPTCHAChange}
-            />
-          </div>
-          <div className="flex items-center justify-between">
-            <button className="btn-sendForm">
-              <div class="svg-wrapper-1">
-                <div class="svg-wrapper">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                  >
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                      fill="currentColor"
-                      d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-                    ></path>
-                  </svg>
+
+        <div className="w-full max-w-lg">
+          {isMobile && (
+            <div className="text-center pt-2">
+              <h1 className="text-3xl font-bold text-gray-900 mb-4">
+                Get in Touch with Us
+              </h1>
+              <p className="text-lg text-gray-700 mb-8">
+                We'd love to hear from you! Whether you have a question, need a
+                quote for a service, or just want to say hello, fill out the
+                form below. Our team is ready to assist you and bring your
+                vision to life with our expertise.
+              </p>
+            </div>
+          )}
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="px-2 py-4 md:py-0 mt-4 md:mt-0 ml-0 md:ml-16 bg-violet-300 rounded shadow"
+          >
+            <div className="mb-4 px-2">
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="from_name"
+              >
+                Name
+                <small className="text-red-800">*</small>
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="from_name"
+                type="text"
+                placeholder="Your name"
+                name="from_name"
+                required
+              />
+            </div>
+            <div className="mb-4 px-2">
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="from_email"
+              >
+                Email <small className="text-red-800">*</small>
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="from_email"
+                type="email"
+                placeholder="Your email"
+                name="from_email"
+                required
+              />
+            </div>
+            <div className="mb-4 px-2">
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="phone_number"
+              >
+                Phone Number <small className="text-red-800">*</small>
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="phone_number"
+                type="text"
+                placeholder="Your phone number"
+                name="phone_number"
+                required
+              />
+            </div>
+            <div className="mb-4 px-2">
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="service"
+              >
+                Service of Interest <small className="text-red-800">*</small>
+              </label>
+              <Select
+                id="service"
+                name="service_of_interest"
+                options={serviceOptions}
+                className="basic-single"
+                classNamePrefix="select"
+                placeholder="Select a service"
+                required
+              />
+            </div>
+            <div className="mb-4 px-2">
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="message"
+              >
+                Message <small className="text-stone-600">(optional)</small>
+              </label>
+              <textarea
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="message"
+                placeholder="Your message"
+                name="message"
+              />
+            </div>
+            <div className="mb-4 d-none">
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey="6LcXABYqAAAAAGv8CTGIzPPL1tEH_q7YR5UfEqRB" // reemplaza con tu clave de sitio
+                onChange={onReCAPTCHAChange}
+              />
+            </div>
+            <div className="flex items-center justify-between">
+              <button className="btn-sendForm">
+                <div class="svg-wrapper-1">
+                  <div class="svg-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        fill="currentColor"
+                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <span>Send</span>
-            </button>
-          </div>
-        </form>
+                <span>Send</span>
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
   );
