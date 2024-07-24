@@ -39,8 +39,8 @@ const CustomCardSlides = ({ layout, img, title, parraf }) => {
         ""
       )}
       <div className="md:w-1/2 p-4">
-        <h3 className="text-xl font-bold mb-2 md:ps-16">{title}</h3>
-        <p className="md:pe-16">{parraf}</p>
+        <h1 className="text-2xl font-bold mb-3 md:ps-16">{title}</h1>
+        <p className="md:ps-16 text-lg">{parraf}</p>
       </div>
       {isMobile ? (
         <div
@@ -48,7 +48,7 @@ const CustomCardSlides = ({ layout, img, title, parraf }) => {
         >
           <img
             src={img}
-            alt="AI Integration Icon"
+            alt={title}
             className="object-contain home__img-introsection md:pe-16"
           />
         </div>

@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import MarketingHelmet from "./marketing.helmet";
 
 const MarketingScreen = () => {
   return (
     <div>
-      <h1></h1>MarketingScreen
+      <MarketingHelmet /> <h1></h1>MarketingScreen
     </div>
   );
 };
