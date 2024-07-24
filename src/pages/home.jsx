@@ -21,10 +21,7 @@ const Home = () => {
           content="Rise FD, web development, web design, cybersecurity, digital marketing, digital services, SaaS solutions, software development, digital agency"
         />
         <meta name="author" content="Rise FD" />
-        <meta
-          property="og:title"
-          content="Rise FD - Full-Service Digital Agency"
-        />
+        <meta property="og:title" content="Rise: Functional Development" />
         <meta
           property="og:description"
           content="Specialists in web development, design, cybersecurity, and digital marketing. Elevate your business with our exceptional services."
