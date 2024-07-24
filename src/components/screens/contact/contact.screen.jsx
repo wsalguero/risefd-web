@@ -116,14 +116,20 @@ const ContactScreen = () => {
               <h1 className="text-3xl md:text-4xl font-bold home-title-bann">
                 Rise Begins with a Conversation
               </h1>
-              <p className="text-lg md:text-xl text-gray-500 mb-6 text-border-sm">
+              <p className="text-lg md:text-xl text-gray-300 mb-6 text-border-sm pt-2">
                 Let's discuss your vision and make it a reality.
               </p>
               <div className="md:flex justify-center mt-4">
                 <div className="group relative">
-                  <button className="text-shadow ">
-                    <FaWhatsapp className="text-shadow w-8 h-8 hover:scale-125 duration-200 hover:text-green-500" />
-                  </button>
+                  <a
+                    href="https://wa.me/50255836903"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="text-shadow ">
+                      <FaWhatsapp className="text-shadow w-8 h-8 hover:scale-125 duration-200 hover:text-green-500" />
+                    </button>
+                  </a>
                   <span
                     className="absolute top-14 left-[50%] -translate-x-[50%] 
                   z-20 origin-left scale-0 px-3 rounded-lg border 
@@ -135,9 +141,11 @@ const ContactScreen = () => {
                   </span>
                 </div>
                 <div className="group relative ">
-                  <button>
-                    <CiMail className="text-shadow w-8 h-8 hover:scale-125 duration-200 hover:text-blue-500" />
-                  </button>
+                  <a href="mailto:risefuncdev@gmail.com">
+                    <button>
+                      <CiMail className="text-shadow w-8 h-8 hover:scale-125 duration-200 hover:text-blue-500" />
+                    </button>
+                  </a>
                   <span
                     className="absolute top-14 left-[50%] -translate-x-[50%] 
                   z-20 origin-left scale-0 px-3 rounded-lg border 
@@ -168,7 +176,11 @@ const ContactScreen = () => {
           <div className="flex justify-center align-bottom">
             <div className="main">
               <div className="up">
-                <a href="https://www.instagram.com/rise.dev/">
+                <a
+                  href="https://www.instagram.com/rise.dev/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="card1">
                     <svg
                       className="instagram icon_position"
@@ -201,14 +213,22 @@ const ContactScreen = () => {
                     </svg>
                   </button>
                 </a>
-                <a href="https://www.facebook.com/risefuncdev">
+                <a
+                  href="https://www.facebook.com/risefuncdev"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="card2">
                     <FaFacebook className="twitter icon_position" />
                   </button>
                 </a>
               </div>
               <div className="down">
-                <a href="https://x.com/rise_fd_devs">
+                <a
+                  href="https://x.com/rise_fd_devs"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="card3">
                     <FaXTwitter className="github icon_position" />
                   </button>

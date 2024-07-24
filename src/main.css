@@ -19,5 +19,5 @@ body:before {
   background-position: center;
   background-attachment: fixed; /* Efecto parallax */
   z-index: -1; /* Asegura que esté detrás del contenido */
-  filter: opacity(0.1); /* Aplica opacidad solo al fondo */
+  filter: opacity(0.155); /* Aplica opacidad solo al fondo */
 }

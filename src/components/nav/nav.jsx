@@ -96,7 +96,7 @@ const Nav = () => {
           {isMobile ? (
             <Dropdown drop="up" as={ButtonGroup}>
               <Button
-                className={`bg-purple-700 border-none ${
+                className={`bg-purple-700 border-none pt-2 ${
                   getActiveClass("/services")
                     ? "bg-purple-700 text-white"
                     : "text-white bg-purple-900"
@@ -104,7 +104,7 @@ const Nav = () => {
                 as={Link}
                 to="/services"
               >
-                <FaServer />{" "}
+                <FaServer />
               </Button>
 
               <Dropdown.Toggle

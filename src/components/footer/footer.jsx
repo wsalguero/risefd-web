@@ -26,11 +26,6 @@ const Footer = () => {
                 </a>
               </li>
               <li className="mb-2">
-                <a href="/about" className="hover:text-purple-300">
-                  About Us
-                </a>
-              </li>
-              <li className="mb-2">
                 <a href="/contact" className="hover:text-purple-300">
                   Contact Us
                 </a>

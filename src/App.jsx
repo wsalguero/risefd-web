@@ -13,6 +13,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />}>
             <Route path="/services/cybersecurity" element={<Services />} />
+            <Route path="/services/digital-marketing" element={<Services />} />
+            <Route path="/services/development" element={<Services />} />
           </Route>
           <Route path="*" element={<Not_foundScreen />} />
           <Route path="/contact" element={<Contact />} />

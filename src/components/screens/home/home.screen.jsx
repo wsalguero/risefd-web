@@ -6,8 +6,9 @@ import React, { useEffect, useState } from "react";
 // images
 import img1 from "../../../assets/images/others/img_rise_web.png";
 import img2 from "../../../assets/images/others/img_rise_web_2.png";
-import img3 from "../../../assets/images/others/img rise web ia.png";
+import img3 from "../../../assets/images/others/rise_mark_img_web-removebg-preview.png";
 import img4 from "../../../assets/images/others/img rise web 3.png";
+import img5 from "../../../assets/images/others/ia img rise web.png";
 import logoToAbout from "../../../assets/images/logos/transparent.png";
 
 import "./home.screen.css";
@@ -184,7 +185,7 @@ const HomeScreen = () => {
               </div>
 
               <div className="about_content">
-                <p className="text-white text-lg font-light md:p-0 p-4">
+                <p className="text-white text-lg font-light md:p-0 p-2">
                   We are a company that emerged from an idea, the idea of
                   providing solutions, tools, and support to people who face
                   daily processes and challenges. Our mission is to help
@@ -199,17 +200,19 @@ const HomeScreen = () => {
             </blockquote>
             <figcaption className="font-medium text-center">
               <div className="mb-2">
-                <p className="md:text-2xl text-xl italic font-bold text-gray-900 dark:text-gray-100 mb-3 md:mb-0">
-                  " Empowering Your Digital Future "
+                <p className="text-md italic font-bold text-gray-900 dark:text-gray-100 mb-3 md:mb-0">
+                  "Rise embodies the spirit of persistence, innovation, and the
+                  relentless pursuit of a brighter future. Together, we elevate
+                  your vision and make it a reality."
                 </p>
               </div>
-              <div className="text-sky-500 dark:text-sky-400 text-lg">
+              <div className="text-sky-500 dark:text-sky-400 text-md">
                 ~ William Salguero{" "}
-                <small className="italic text-lg text-sky-600 dark:text-sky-600">
+                <small className="italic text-md text-sky-600 dark:text-sky-600">
                   ( Wesc/Jadeezz )
                 </small>
               </div>
-              <div className="text-slate-800 dark:text-slate-500 text-md">
+              <div className="text-slate-800 dark:text-slate-500 text-sm">
                 CEO & Founder
               </div>
             </figcaption>
@@ -247,7 +250,7 @@ const HomeScreen = () => {
         />
         <CustomCardSlides
           title={"AI Integration"}
-          img={img3}
+          img={img5}
           layout={"left"}
           parraf={p5}
         />

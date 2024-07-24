@@ -18,7 +18,7 @@ const CustomCard = ({
 
   return phat_to ? (
     <Link className="" to={phat_to}>
-      <div className={cardClass}>
+      <div className={`e-card ${cardClass}`}>
         <div className="image"></div>
         <div className={`wave ${wave_color}`}></div>
         <div className={`wave ${wave_color}`}></div>
@@ -49,14 +49,19 @@ const CustomCard = ({
             ></path>
           </svg>
           <br />
-          {title}
+          <h1 className="text-2xl">{title}</h1>
+          <small className="text-gray-500">Coming soon</small>
           <br />
-          <div className="name">{description}</div>
+          <div className="name">
+            <p className="text-xl text-gray-700 text-white px-3">
+              {description}
+            </p>
+          </div>
         </div>
       </div>
     </Link>
   ) : (
-    <div className={cardClass}>
+    <div className={`e-card ${cardClass}`}>
       <div className="image"></div>
       <div className={`wave ${wave_color}`}></div>
       <div className={`wave ${wave_color}`}></div>
@@ -89,7 +94,9 @@ const CustomCard = ({
         <br />
         {title}
         <br />
-        <div className="name">{description}</div>
+        <div className="name">
+          <p className="text-xl text-gray-700 text-white pb-2">{description}</p>
+        </div>
       </div>
     </div>
   );
