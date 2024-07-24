@@ -1,7 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+  FaPhoneAlt,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import "./footer.css";
 
 const Footer = () => {
   return (
@@ -34,8 +42,30 @@ const Footer = () => {
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-4">Contact Information</h4>
-            <p>Email: risefuncdev@gmail.com</p>
-            <p>Phone:(+502) 5583-6903</p>
+            <div className="contact-container">
+              <p className="flex justify-start items-center mb-2">
+                <span className="h4 pr-4">
+                  <a href="tel:+50255836903">
+                    <FaPhoneAlt />
+                  </a>
+                </span>
+                <a href="tel:+50255836903" className="pb-1">
+                  (+502) 5583-6903
+                </a>
+              </p>
+              <hr className="border" />
+              <p className="flex justify-start items-center mt-2">
+                <span className="h4 pr-4">
+                  <a href="mailto:risefuncdev@gmail.com">
+                    <CiMail />
+                  </a>
+                </span>
+                <a href="mailto:risefuncdev@gmail.com" className="pb-1">
+                  risefuncdev@gmail.com
+                </a>
+              </p>
+            </div>
+
             <div className="flex space-x-4 mt-4">
               <a
                 href="https://www.facebook.com/risefuncdev"

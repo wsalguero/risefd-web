@@ -213,6 +213,10 @@ const CybersecurityScreen = () => {
               <li>24/7 monitoring and support</li>
             </ul>
             <div className="d-block mt-12">
+              <p className="text-lg text-gray-700 mt-4">
+                Can't find what you're looking for? Explore our other services
+                below.
+              </p>
               <div className="container_cards mt-3">
                 <Link to={"/services/development"}>
                   <div data-text="Software services" className="glass">
@@ -233,10 +237,6 @@ const CybersecurityScreen = () => {
                 </Link>
               </div>
             </div>
-            <p className="text-lg text-gray-700 mt-4">
-              Can't find what you're looking for? Explore our other services
-              below.
-            </p>
           </div>
         </section>
       </section>
