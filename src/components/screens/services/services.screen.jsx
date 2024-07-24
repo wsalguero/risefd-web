@@ -125,7 +125,7 @@ const ServicesScreen = () => {
             to succeed in a competitive landscape.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pl-14 md:pl-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <CustomCard
             wave_color="bg-green-500"
             title={"Hi-P"}
