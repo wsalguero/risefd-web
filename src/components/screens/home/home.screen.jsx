@@ -8,7 +8,7 @@ import img1 from "../../../assets/images/others/img_rise_web.png";
 import img2 from "../../../assets/images/others/img_rise_web_2.png";
 import img3 from "../../../assets/images/others/rise_mark_img_web-removebg-preview.png";
 import img4 from "../../../assets/images/others/img rise web 3.png";
-import img5 from "../../../assets/images/others/ia img rise web.png";
+import img5 from "../../../assets/images/others/img rise web ia.png";
 import logoToAbout from "../../../assets/images/logos/transparent.png";
 
 import "./home.screen.css";

@@ -21,3 +21,8 @@ body:before {
   z-index: -1; /* Asegura que esté detrás del contenido */
   filter: opacity(0.155); /* Aplica opacidad solo al fondo */
 }
+
+img {
+  aspect-ratio: auto;
+  object-fit: cover;
+}
