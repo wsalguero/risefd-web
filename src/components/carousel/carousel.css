@@ -25,11 +25,19 @@
   background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
   padding: 10px;
   border-radius: 5px;
-  border: 2px solid white; /* Borde blanco */
   color: white; /* Color del texto */
+  padding-bottom: 15px;
 }
 
 .carousel-caption h5,
 .carousel-caption p {
   margin: 0; /* Remover márgenes para mejor ajuste */
+}
+
+.carousel-caption h5 {
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.17); /* Sombra blanca */
+}
+
+.carousel-caption p {
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8); /* Sombra blanca */
 }

@@ -120,7 +120,7 @@ const ContactScreen = () => {
                 Let's discuss your vision and make it a reality.
               </p>
               <div className="md:flex justify-center mt-4">
-                <div className="group relative">
+                <div className="group relative md:pr-4 mb-3">
                   <a
                     href="https://wa.me/50255836903"
                     target="_blank"
@@ -161,9 +161,9 @@ const ContactScreen = () => {
           </div>
         </div>
       </section>
-      <section className="md:flex md:justify-center">
+      <section className="md:flex md:justify-center md:px-20">
         <div className="">
-          <div className="md:px-20 text-center">
+          <div className="text-center">
             <h1 className="text-3xl font-bold text-gray-900 mb-4">
               Stay Connected with Rise FD
             </h1>
@@ -174,7 +174,7 @@ const ContactScreen = () => {
             </p>
           </div>
 
-          <div className="flex justify-center align-bottom mb-4">
+          <div className="flex justify-center align-bottom mb-4 ">
             <div className="main">
               <div className="up">
                 <a
@@ -259,11 +259,11 @@ const ContactScreen = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="px-2 py-4 md:py-0 mt-4 md:mt-0 ml-0 md:ml-16 bg-violet-300 rounded shadow"
+            className="px-2 py-4 md:py-0 mt-4 md:mt-0 ml-0 md:ml-16 bg-violet-300 rounded shadow md:pr-16"
           >
             <div className="mb-4 px-2">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
+                className="block text-gray-900 text-sm font-bold mb-2"
                 htmlFor="from_name"
               >
                 Name
@@ -280,7 +280,7 @@ const ContactScreen = () => {
             </div>
             <div className="mb-4 px-2">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
+                className="block text-gray-900 text-sm font-bold mb-2"
                 htmlFor="from_email"
               >
                 Email <small className="text-red-800">*</small>
@@ -296,7 +296,7 @@ const ContactScreen = () => {
             </div>
             <div className="mb-4 px-2">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
+                className="block text-gray-900 text-sm font-bold mb-2"
                 htmlFor="phone_number"
               >
                 Phone Number <small className="text-red-800">*</small>
@@ -312,7 +312,7 @@ const ContactScreen = () => {
             </div>
             <div className="mb-4 px-2">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
+                className="block text-gray-900 text-sm font-bold mb-2"
                 htmlFor="service"
               >
                 Service of Interest <small className="text-red-800">*</small>
@@ -329,7 +329,7 @@ const ContactScreen = () => {
             </div>
             <div className="mb-4 px-2">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
+                className="block text-gray-900 text-sm font-bold mb-2"
                 htmlFor="message"
               >
                 Message <small className="text-stone-600">(optional)</small>
@@ -348,10 +348,10 @@ const ContactScreen = () => {
                 onChange={onReCAPTCHAChange}
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-center">
               <button className="btn-sendForm">
-                <div class="svg-wrapper-1">
-                  <div class="svg-wrapper">
+                <div className="svg-wrapper-1">
+                  <div className="svg-wrapper">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"

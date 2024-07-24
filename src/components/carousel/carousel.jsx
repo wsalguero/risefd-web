@@ -32,7 +32,7 @@ const CustomCarousel = ({ items, width, height }) => {
                 }} // Ajustar el tamaño máximo y ancho al 100%
               />
               <div className="carousel-caption d-none d-md-block caption-background">
-                <h5>{item.caption_title}</h5>
+                <h5 className="text-lg font-bold">{item.caption_title}</h5>
                 <p>{item.caption}</p>
               </div>
             </>
