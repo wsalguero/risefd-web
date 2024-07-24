@@ -30,11 +30,6 @@ const Footer = () => {
                   Contact Us
                 </a>
               </li>
-              <li className="mb-2">
-                <a href="/blog" className="hover:text-purple-300">
-                  Blog
-                </a>
-              </li>
             </ul>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
