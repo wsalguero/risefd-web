@@ -198,6 +198,7 @@ const HomeScreen = () => {
                 </p>
               </div>
             </blockquote>
+            <hr className="hr-white" />
             <figcaption className="font-medium text-center">
               <div className="mb-2">
                 <p className="text-md italic font-bold text-gray-900 dark:text-gray-100 mb-3 md:mb-0">
@@ -206,13 +207,13 @@ const HomeScreen = () => {
                   your vision and make it a reality."
                 </p>
               </div>
-              <div className="text-sky-500 dark:text-sky-400 text-md">
+              <div className="text-sky-400 dark:text-sky-400 text-md">
                 ~ William Salguero{" "}
-                <small className="italic text-md text-sky-600 dark:text-sky-600">
+                <small className="italic text-md text-sky-500 dark:text-sky-500">
                   ( Wesc/Jadeezz )
                 </small>
               </div>
-              <div className="text-slate-800 dark:text-slate-500 text-sm">
+              <div className="text-slate-400 dark:text-slate-400 text-sm">
                 CEO & Founder
               </div>
             </figcaption>

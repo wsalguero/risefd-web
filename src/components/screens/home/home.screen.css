@@ -156,3 +156,9 @@
     flex-direction: column-reverse;
   }
 }
+
+.hr-white {
+  border: 0;
+  height: 1px;
+  background: white;
+}
