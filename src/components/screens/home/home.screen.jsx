@@ -222,7 +222,7 @@ const HomeScreen = () => {
 
       <section className="container py-16 md:px-16">
         <div className="text-center pt-16">
-          <h2 className="text-3xl font-bold">Why Rise FD?</h2>
+          <h2 className="text-3xl font-bold">Why choose RiseFD?</h2>
         </div>
         <CustomCardSlides
           title={"Expert Consultancy"}

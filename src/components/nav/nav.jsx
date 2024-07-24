@@ -88,11 +88,6 @@ const Nav = () => {
               {!isMobile && "Contact Us"} {isMobile && <MdContactMail />}
             </Link>
           </li>
-          <li className={`nav__links ${getActiveClass("/blog")}`}>
-            <Link to="/blog">
-              {!isMobile && "Rise Blog"} {isMobile && <FaArrowCircleUp />}
-            </Link>
-          </li>
           {isMobile ? (
             <Dropdown drop="up" as={ButtonGroup}>
               <Button
@@ -106,37 +101,60 @@ const Nav = () => {
               >
                 <FaServer />
               </Button>
-
               <Dropdown.Toggle
                 className={`bg-purple-700 border-none ${
                   getActiveClass("/services")
                     ? "bg-purple-700 text-white"
-                    : "text-white"
+                    : "text-white bg-purple-900"
                 }`}
                 id="dropdown-basic"
               ></Dropdown.Toggle>
 
-              <Dropdown.Menu className="bg-purple-100">
+              <Dropdown.Menu className="bg-purple-300">
                 <Dropdown.Item
                   as={Link}
-                  to="/services/service1"
+                  to="/services/development"
                   className="text-black hover:bg-purple-700"
                 >
-                  Service 1
+                  Software/Web & App Development{" "}
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
-                  to="/services/service2"
+                  to="/services/digital-marketing"
                   className="text-black hover:bg-purple-700"
                 >
-                  Service 2
+                  Marketing Services
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
-                  to="/services/service3"
+                  to="/services/cybersecurity"
                   className="text-black hover:bg-purple-700"
                 >
-                  Service 3
+                  Cybersecurity
+                </Dropdown.Item>
+
+                <hr className="dropdown-divider px-2" />
+
+                <small
+                  className="text-black font-bold px-2 text-lg"
+                  style={{ fontSize: "15px" }}
+                >
+                  Our Products
+                </small>
+
+                <Dropdown.Item
+                  as={Link}
+                  to="/services"
+                  className="text-black hover:bg-purple-700"
+                >
+                  Hi-P
+                </Dropdown.Item>
+                <Dropdown.Item
+                  as={Link}
+                  to="/services"
+                  className="text-black hover:bg-purple-700"
+                >
+                  RomboNook
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
@@ -163,27 +181,51 @@ const Nav = () => {
                 id="dropdown-basic"
               ></Dropdown.Toggle>
 
-              <Dropdown.Menu className="bg-purple-400">
+              <Dropdown.Menu className="bg-purple-300">
                 <Dropdown.Item
                   as={Link}
-                  to="/services/service1"
+                  to="/services/development"
                   className="text-black hover:bg-purple-700"
                 >
-                  Software Development
+                  Software/Web & App Development{" "}
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
-                  to="/services/service2"
+                  to="/services/digital-marketing"
                   className="text-black hover:bg-purple-700"
                 >
                   Marketing Services
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
-                  to="/services/service3"
+                  to="/services/cybersecurity"
                   className="text-black hover:bg-purple-700"
                 >
+                  Cybersecurity
+                </Dropdown.Item>
+
+                <hr className="dropdown-divider px-2" />
+
+                <small
+                  className="text-black font-bold px-2 text-lg"
+                  style={{ fontSize: "15px" }}
+                >
                   Our Products
+                </small>
+
+                <Dropdown.Item
+                  as={Link}
+                  to="/services"
+                  className="text-black hover:bg-purple-700"
+                >
+                  Hi-P
+                </Dropdown.Item>
+                <Dropdown.Item
+                  as={Link}
+                  to="/services"
+                  className="text-black hover:bg-purple-700"
+                >
+                  RomboNook
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

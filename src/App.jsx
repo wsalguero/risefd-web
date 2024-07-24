@@ -4,23 +4,25 @@ import Contact from "./pages/contact";
 import Services from "./pages/services";
 import Home from "./pages/home";
 import { Not_foundScreen } from "./components/screens";
+import SoftwareDevelopmentScreen from "./components/screens/services/development/development.screen";
+import MarketingScreen from "./components/screens/services/marketing/marketing.screen";
+import CybersecurityScreen from "./components/screens/services/cybersecurity/cybersecurity.screen";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />}>
-            <Route path="/services/cybersecurity" element={<Services />} />
-            <Route path="/services/digital-marketing" element={<Services />} />
-            <Route path="/services/development" element={<Services />} />
-          </Route>
-          <Route path="*" element={<Not_foundScreen />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />}>
+          <Route path="development" element={<SoftwareDevelopmentScreen />} />
+          <Route path="cybersecurity" element={<CybersecurityScreen />} />
+          <Route path="digital-marketing" element={<MarketingScreen />} />
+        </Route>
+        <Route path="*" element={<Not_foundScreen />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about-us" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

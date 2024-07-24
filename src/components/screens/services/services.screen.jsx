@@ -75,7 +75,7 @@ const ServicesScreen = () => {
               </div>
             </div>
             <div className="pt-4 md:pl-20">
-              <Link to={"/services/digital-marketing"}>
+              <Link to={"/services/development"}>
                 <button className="btn-seemore-services">
                   <span className="btn-text-one">See More</span>
                   <span className="btn-text-two btn-sd">
@@ -101,7 +101,7 @@ const ServicesScreen = () => {
               </div>
             </div>
             <div className="pt-4 md:pl-20">
-              <Link to={"/services/development"}>
+              <Link to={"/services/digital-marketing"}>
                 <button className="btn-seemore-services">
                   <span className="btn-text-one">See More</span>
                   <span className="btn-text-two">About Digital Marketing!</span>
