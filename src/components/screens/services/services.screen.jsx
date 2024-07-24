@@ -128,7 +128,7 @@ const ServicesScreen = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pl-14 md:pl-0">
           <CustomCard
             wave_color="bg-green-500"
-            title={"Hi-P"}
+            title={"Hi-!P"}
             description={
               "An advanced IP tracking and control system designed to enhance the security of business application logins, ensuring safe and authorized access."
             }

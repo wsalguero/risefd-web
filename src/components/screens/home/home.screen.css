@@ -162,3 +162,17 @@
   height: 1px;
   background: white;
 }
+
+.about-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem; /* Ajusta el redondeo de las esquinas */
+}
+
+.md\\:flex {
+  display: flex;
+}
+
+.md\\:flex-1 {
+  flex: 1;
+}

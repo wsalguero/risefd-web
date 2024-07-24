@@ -183,14 +183,13 @@ const HomeScreen = () => {
       </section>
 
       <section className="mt-4 md:px-16">
-        <figure className="md:flex bg-slate-100 rounded-xl p-7 md:p-8 md:p-0 bg-slate-800">
-          <img src={logoToAbout} alt="" />
-          <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
+        <figure className="md:flex bg-slate-100 rounded-xl p-7 md:p-4 md:p-0 bg-slate-800">
+          <img src={logoToAbout} alt="About Logo" className="about-img" />
+          <div className="pt-6 md:p-8 text-center md:text-left space-y-4 flex-1">
             <blockquote>
               <div className="text-neon-container">
                 <h2 className="text-3xl font-bold text-neon mb-4">About Us</h2>
               </div>
-
               <div className="about_content">
                 <p className="text-white text-lg font-light md:p-0 p-2">
                   We are a company that emerged from an idea, the idea of
@@ -215,7 +214,7 @@ const HomeScreen = () => {
                 </p>
               </div>
               <div className="text-sky-400 dark:text-sky-400 text-md">
-                ~ William Salguero{" "}
+                ~ William Salguero
                 <small className="italic text-md text-sky-500 dark:text-sky-500">
                   ( Wesc/Jadeezz )
                 </small>

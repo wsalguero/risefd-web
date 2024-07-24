@@ -147,7 +147,7 @@ const Nav = () => {
                   to="/services"
                   className="text-black hover:bg-purple-700"
                 >
-                  Hi-P
+                  Hi-!P
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
@@ -218,7 +218,7 @@ const Nav = () => {
                   to="/services"
                   className="text-black hover:bg-purple-700"
                 >
-                  Hi-P
+                  Hi-!P
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}

@@ -121,7 +121,7 @@ const CybersecurityScreen = () => {
             <div className="group overflow-hidden bg-neutral-50 rounded bg-gradient-to-tr from-purple-800 via-purple-700 to-purple-500 text-gray-50">
               <div className="before:duration-700 before:absolute before:w-28 before:h-28 before:bg-transparent before:blur-none before:border-8 before:opacity-50 before:rounded-full before:-left-4 before:-top-12 w-64 h-48 flex flex-col justify-between relative z-10 group-hover:before:top-28 group-hover:before:left-44 group-hover:before:scale-125 group-hover:before:blur">
                 <div className="text p-3 flex flex-col justify-evenly h-full">
-                  <span className="font-bold text-2xl service-card-title">
+                  <span className="font-bold text-xl service-card-title">
                     Security Awareness Training
                   </span>
                   <p className="service-card-subtitle">
