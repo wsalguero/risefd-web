@@ -7,7 +7,7 @@ import CustomCard from "../../cards/customCard";
 
 const ServicesScreen = () => {
   return (
-    <main className="md:px-16 container md:px-16 px-6 mb-5">
+    <main className="md:px-16 container px-6 mb-5">
       <section className="mb-16 mt-16 md:px-16 pt-12">
         <div className="parallax-container-services md:px-16 mt-5">
           <div className="content">
