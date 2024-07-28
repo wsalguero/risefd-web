@@ -106,7 +106,7 @@ const SoftwareDevelopmentScreen = () => {
         <section className="benefits-section py-16 text-center">
           <div className="container mx-auto">
             <div className="">
-              <h2 className="text-3xl font-bold mb-4">Benefits</h2>
+              <h2 className="text-3xl font-bold mb-4">Why Choose Us?</h2>
               <ul className="list-disc list-inside text-lg mb-8 list-none">
                 <li>Custom solutions tailored to your business needs</li>
                 <li>Flexible and scalable application architecture</li>
@@ -117,7 +117,19 @@ const SoftwareDevelopmentScreen = () => {
                   Comprehensive testing to ensure high-quality deliverables
                 </li>
                 <li>Ongoing support and maintenance</li>
-              </ul>
+              </ul>{" "}
+              <p className="text-lg text-gray-700 mt-4">
+                We're passionate about helping businesses like yours succeed.
+                Let's work together to develop innovative software solutions
+                that drive growth and efficiency. Our team of experts is
+                dedicated to providing you with the best technologies and
+                practices to meet your unique business needs.
+              </p>
+              <p className="text-lg text-gray-700 my-4">
+                Contact us today to learn more about our software development
+                services and how we can help your business thrive with custom,
+                scalable, and high-quality applications.
+              </p>
             </div>
             <hr />
             <div className="d-block mt-12">

@@ -123,7 +123,7 @@ const Nav = () => {
                   to="/services/digital-marketing"
                   className="text-black hover:bg-purple-700"
                 >
-                  Marketing Services
+                  Digital Marketing Services
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
@@ -194,7 +194,7 @@ const Nav = () => {
                   to="/services/digital-marketing"
                   className="text-black hover:bg-purple-700"
                 >
-                  Marketing Services
+                  Digital Marketing Services
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}

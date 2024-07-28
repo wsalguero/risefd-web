@@ -206,12 +206,27 @@ const CybersecurityScreen = () => {
 
         <section className="benefits-section py-16 text-center">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Benefits</h2>
-            <ul className="list-disc list-inside text-lg mb-8 list-none">
-              <li>Enhanced protection against cyber threats</li>
-              <li>Improved compliance with industry standards</li>
-              <li>24/7 monitoring and support</li>
-            </ul>
+            <div>
+              <h2 className="text-3xl font-bold mb-4">Why Choose Us?</h2>
+              <ul className="list-disc list-inside text-lg mb-8 list-none">
+                <li>Expert team of cybersecurity professionals</li>
+                <li>Commitment to customer satisfaction</li>
+                <li>High-quality solutions with long-term support</li>
+              </ul>
+              <p className="text-lg text-gray-700 mt-4">
+                We believe in providing a secure and reliable cybersecurity
+                solution for your business. Let us help you stay ahead of the
+                curve. Our team of experts is committed to safeguarding your
+                data and systems from cyber threats, ensuring peace of mind and
+                business continuity.
+              </p>
+              <p className="text-lg text-gray-700 my-4">
+                Contact us today to learn more about our comprehensive
+                cybersecurity services and how we can help protect your business
+                with cutting-edge technology and best practices.
+              </p>
+            </div>
+            <hr className="mx-4" />
             <div className="d-block mt-12">
               <p className="text-lg text-gray-700 mt-4">
                 Can't find what you're looking for? Explore our other services
