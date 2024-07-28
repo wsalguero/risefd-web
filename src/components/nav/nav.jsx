@@ -130,7 +130,7 @@ const Nav = () => {
                   to="/services/cybersecurity"
                   className="text-black hover:bg-purple-700"
                 >
-                  Cybersecurity
+                  Cybersecurity Services
                 </Dropdown.Item>
 
                 <hr className="dropdown-divider px-2" />
@@ -201,7 +201,7 @@ const Nav = () => {
                   to="/services/cybersecurity"
                   className="text-black hover:bg-purple-700"
                 >
-                  Cybersecurity
+                  Cybersecurity Services
                 </Dropdown.Item>
 
                 <hr className="dropdown-divider px-2" />
