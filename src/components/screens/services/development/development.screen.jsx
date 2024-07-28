@@ -90,7 +90,7 @@ const SoftwareDevelopmentScreen = () => {
         </section>
 
         <div className="md:px-16">
-          <div className="overview-section py-16 bg-gray-100 text-center md:px-16">
+          <div className="custom-section py-16 bg-gray-100 text-center md:px-16">
             <div className="content mx-auto">
               <h2 className="text-3xl font-bold mb-4">Custom Development</h2>
               <p className="text-lg">

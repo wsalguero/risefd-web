@@ -1,4 +1,4 @@
-.overview-section {
+.custom-section {
   position: relative;
   background-image: url("/src/assets/images/banner/bannersfotfdev.webp");
   background-attachment: fixed;
@@ -12,12 +12,12 @@
 }
 
 @media (max-width: 778px) {
-  .overview-section {
+  .custom-section {
     background-position: 50% 50%;
   }
 }
 
-.overview-section::after {
+.custom-section::after {
   content: "";
   position: absolute;
   top: 0;
@@ -28,7 +28,7 @@
   z-index: 1;
 }
 
-.overview-section .content {
+.custom-section .content {
   position: relative;
   z-index: 2;
   text-align: center;
