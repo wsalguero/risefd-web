@@ -4,6 +4,8 @@ import { FaBars, FaTimes, FaCode, FaCloud, FaBullhorn } from "react-icons/fa";
 import Link from "next/link";
 import "./nav.css";
 import { BiDownArrow } from "react-icons/bi";
+import Image from "next/image";
+import Logo from "@/assets/images/logos/logo.png"
 
 const navLinksObj = [
     { title: "Products", path: "/products" },
@@ -89,6 +91,7 @@ const Nav = () => {
                 zIndex: 1000,
             }}>
             <div className="logoNav__container">
+                <Image src={Logo} alt="Logo Navbar" />
                 <Link href={"/"}>
                     <label htmlFor="logo-navBrand">Rise FD</label>
                 </Link>
