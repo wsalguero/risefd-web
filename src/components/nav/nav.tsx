@@ -5,7 +5,7 @@ import Link from "next/link";
 import "./nav.css";
 import { BiDownArrow } from "react-icons/bi";
 import Image from "next/image";
-import Logo from "@/assets/images/logos/logo.png"
+import Logo from "@/assets/images/logos/logo.png";
 
 const navLinksObj = [
     { title: "Products", path: "/products" },
@@ -50,33 +50,36 @@ const Nav = () => {
     }, [hoveringMenu]);
 
     const [isMobile, setIsMobile] = useState(false);
-    const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+    const [prevScrollPos, setPrevScrollPos] = useState(0); // Inicializado en 0 para evitar problemas en SSR
     const [visible, setVisible] = useState(true);
 
     useEffect(() => {
-        const handleResize = () => {
-            const screenWidth = window.innerWidth;
-            setIsMobile(screenWidth <= 768);
-        };
+        // Verifica si `window` está disponible antes de acceder a él
+        if (typeof window !== "undefined") {
+            const handleResize = () => {
+                const screenWidth = window.innerWidth;
+                setIsMobile(screenWidth <= 768);
+            };
 
-        const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
-            if (!isMobile) {
-                setVisible(prevScrollPos > currentScrollPos);
-            } else {
-                setVisible(true); // Mantener siempre visible en dispositivos móviles
-            }
-            setPrevScrollPos(currentScrollPos);
-        };
+            const handleScroll = () => {
+                const currentScrollPos = window.pageYOffset;
+                if (!isMobile) {
+                    setVisible(prevScrollPos > currentScrollPos);
+                } else {
+                    setVisible(true); // Mantener siempre visible en dispositivos móviles
+                }
+                setPrevScrollPos(currentScrollPos);
+            };
 
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        window.addEventListener("scroll", handleScroll);
+            window.addEventListener("resize", handleResize);
+            window.addEventListener("scroll", handleScroll);
 
-        return () => {
-            window.removeEventListener("resize", handleResize);
-            window.removeEventListener("scroll", handleScroll);
-        };
+            // Limpieza de eventos al desmontar el componente
+            return () => {
+                window.removeEventListener("resize", handleResize);
+                window.removeEventListener("scroll", handleScroll);
+            };
+        }
     }, [prevScrollPos, isMobile]);
 
 
