@@ -1,7 +1,0 @@
-.contact-container {
-  max-width: fit-content; /* Ajusta el contenedor al tamaño del contenido */
-}
-
-.contact-container hr {
-  margin: 0; /* Elimina el margen predeterminado */
-}
