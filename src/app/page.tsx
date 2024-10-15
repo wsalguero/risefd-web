@@ -7,8 +7,7 @@ import textImg from "@/assets/images/home/img.png";
 import { useEffect, useRef, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { mainServices, objTestimonials, presentations } from "@/consts";
-import { text } from "stream/consumers";
-import { RiArrowLeftCircleLine, RiArrowRightDoubleFill } from "react-icons/ri";
+import { RiArrowRightDoubleFill } from "react-icons/ri";
 
 
 export default function Home() {
