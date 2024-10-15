@@ -15,15 +15,24 @@ const Page = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-            setIsLandscape(window.innerWidth > window.innerHeight);
+            if (typeof window !== "undefined") {
+                setIsMobile(window.innerWidth <= 768);
+                setIsLandscape(window.innerWidth > window.innerHeight);
+            }
         };
 
         handleResize();
-        window.addEventListener("resize", handleResize);
+        if (typeof window !== "undefined") {
+            window.addEventListener("resize", handleResize);
+        }
 
-        return () => window.removeEventListener("resize", handleResize);
+        return () => {
+            if (typeof window !== "undefined") {
+                window.removeEventListener("resize", handleResize);
+            }
+        };
     }, []);
+
 
     useEffect(() => {
         const observerOptions = {
