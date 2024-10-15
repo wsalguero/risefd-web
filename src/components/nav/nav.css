@@ -1,0 +1,219 @@
+:root {
+  --navTextColor: #ffffff;
+  --navBackground: #3e007a;
+  --navHoverColor: #c084fc;
+}
+
+.nav__element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: var(--navBackground);
+  height: 100px;
+  transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(255, 255, 255, 0.1);
+
+  @media (max-width: 768px) {
+    height: 100px;
+  }
+}
+
+.nav__element:hover {
+  background-color: #370569; /* Darker purple on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6), 0 3px 6px rgba(255, 255, 255, 0.2); /* Intensifying the shadow */
+}
+
+.logoNav__container a {
+  display: flex;
+  align-items: center;
+}
+
+.listNav__element {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: var(--navTextColor);
+  justify-content: space-between;
+}
+
+.list__Item {
+  position: relative; /* Important to make the submenu absolute relative to its parent */
+  transition: color 0.3s ease;
+}
+
+.list__Item a {
+  text-decoration: none;
+  color: var(--navTextColor);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.list__Item a:hover {
+  color: var(--navHoverColor);
+}
+
+.submenu {
+  background-color: #18122b;
+  padding: 10px;
+  height: auto;
+  width: 450px;
+}
+/* Ensuring the entire li triggers the hover, not just the text inside */
+.services_li:hover {
+  background-color: #6d295c; /* Example: changing background of the li on hover */
+}
+
+.submenuServices__Container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  z-index: 1000; /* Asegura que este valor sea alto pero no ridículamente alto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  visibility: hidden;
+}
+
+.services_li:hover .submenuServices__Container,
+.submenuServices__Container:hover {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1000; /* Para asegurarse de que quede siempre visible */
+}
+
+.submenu__item {
+  padding: 10px 20px;
+  white-space: nowrap;
+  background-color: #ffffff;
+}
+
+.submenu__item a {
+  text-decoration: none;
+  color: var(--navTextColor);
+  font-weight: 400;
+}
+
+.submenu__item a:hover {
+  color: var(--navHoverColor);
+}
+
+.service__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logoNav__container label {
+  font-size: 2.5vh;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(200, 132, 252, 0.8);
+  cursor: pointer;
+}
+
+.menuMobile__button {
+  display: none;
+  color: #ffffff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menuMobile__button:hover {
+  color: var(--navHoverColor);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .listNav__element {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--navBackground);
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .listNav__element.block {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .logoNav__container {
+    display: block;
+  }
+
+  .menuMobile__button {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title of the service */
+.service__title {
+  color: #333;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Description of the service */
+.service__description {
+  color: #6b7280; /* Tailwind's gray-500 */
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.4;
+}
+
+/* Icon container */
+.service__iconContainer {
+  background-color: #e5e7eb; /* Light gray background for the icon */
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.service__iconContainer:hover {
+  background-color: #d1d5db; /* Slightly darker gray on hover */
+}
+
+/* Ensuring the entire submenu is responsive */
+@media (max-width: 768px) {
+  .submenuServices__Container {
+    width: 100%; /* Full width on mobile */
+  }
+
+  .submenu__item {
+    padding: 15px 10px; /* More padding for touch devices */
+  }
+
+  .service__title {
+    font-size: 1rem; /* Smaller font on mobile */
+  }
+
+  .service__description {
+    font-size: 0.75rem; /* Smaller description */
+  }
+
+  .service__iconContainer {
+    padding: 6px;
+  }
+}

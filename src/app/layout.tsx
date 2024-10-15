@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./globals.css"
+import Nav from "@/components/nav/nav";
+import Head from "next/head";
+import Footer from "@/components/footer/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -25,10 +29,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Exo:wght@400&display=swap"
+        />.
+
+      </Head>
+
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} style={{ fontFamily: 'Exo, sans-serif' }}>
+        <header className="">
+          <Nav />
+        </header>
+        <main className="md:pt-24 pt-12">
+          {children}
+        </main>
+        <Footer></Footer>
       </body>
     </html>
   );
