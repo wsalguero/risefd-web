@@ -1,27 +1,28 @@
 :root {
-  --navTextColor: #ffffff;
-  --navBackground: #340166;
-  --navHoverColor: #2d0158;
+  --navTextColor: #000000;
+  --navBackground: #ffffff;
+  --navHoverColor: #97f5c175;
 }
 
 .nav__element {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
   background-color: var(--navBackground);
   height: 100px;
-  transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  width: 100%;
+  transition: background-color 2s ease-in-out, box-shadow 0.5s ease-in-out;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(255, 255, 255, 0.1);
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    height: 60px !important;
+  }
 
   @media (max-width: 768px) {
     height: 100px;
+    width: 100%;
   }
-}
-
-.nav__element:hover {
-  background-color: var(--navHoverColor); /* Darker purple on hover */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6), 0 3px 6px rgba(255, 255, 255, 0.2); /* Intensifying the shadow */
 }
 
 .listNav__element {
@@ -47,29 +48,27 @@
 }
 
 .list__Item a:hover {
-  color: var(--navHoverColor);
+  color: #2e2e2e;
 }
 
 .submenu {
   padding: 10px;
   height: auto;
   width: 450px;
-  background-color: #26014b;
+  background-color: #ffffff;
   color: var(--navTextColor);
+  border-radius: 25px;
+  border: 1px solid #e7e7e7;
 }
 /* Ensuring the entire li triggers the hover, not just the text inside */
-.services_li:hover {
-  background-color: #6d295c; /* Example: changing background of the li on hover */
-}
 
 .submenuServices__Container {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   z-index: 1000; /* Asegura que este valor sea alto pero no ridículamente alto */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   visibility: hidden;
 }
@@ -80,6 +79,7 @@
   opacity: 1;
   visibility: visible;
   z-index: 1000; /* Para asegurarse de que quede siempre visible */
+  left: 0;
 }
 
 .submenu__item {
@@ -89,26 +89,27 @@
 
 .logoNav__container label {
   font-size: 2.5vh;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: 0px 0px 10px rgba(200, 132, 252, 0.8);
+  font-weight: 100;
+  color: #000000;
+  text-shadow: 0px 0px 10px #97f5c1cc;
+  cursor: pointer;
+  letter-spacing: 4px;
   cursor: pointer;
 }
 .logoNav__container a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1d0231;
 }
 
 .logo_img {
-  width: 50px !important;
+  width: 60px !important;
   height: auto;
 }
 
 .menuMobile__button {
   display: none;
-  color: #ffffff;
+  color: #000000;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -176,17 +177,13 @@
   gap: 10px;
   justify-content: flex-start;
   padding-bottom: 5px;
-  transition: transform 0.3s ease;
-}
-
-.submenu__linkContainerChild:hover {
-  transform: translateX(5px);
 }
 
 .submenu__p {
-  color: #ccc;
+  color: #2c2c2c;
   font-size: 0.9rem;
   margin-top: 0.5rem;
+  text-wrap: wrap;
 }
 
 .submenu__container {
@@ -200,12 +197,20 @@
 }
 
 .submenu__item {
+  border-radius: 25px;
+  border: dashed 0.5px transparent;
   list-style: none;
+  transition: border 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.submenu__item:hover {
+  background-color: #97f5c13f;
+  border: dashed 0.5px #97f5c15b;
 }
 
 .submenu-link-item {
   align-items: start;
-  color: #aaa;
+  color: #141414;
 }
 
 .submenu-link-item:hover {
@@ -213,7 +218,7 @@
 }
 
 .icon-container {
-  background-color: #4a4a4a;
+  background-color: #97f5c175;
   padding: 8px;
   border-radius: 50%;
 }

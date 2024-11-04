@@ -4,28 +4,31 @@ import man from "@/assets/images/home/man.png";
 
 export const presentations = [
   {
+    title: "Elevate Your Digital Presence",
     image: womenandMen,
     backgroundColor:
-      "linear-gradient(60deg, #1b004f, 25%, #3f007a, 75%, #6b00b2)",
+      "linear-gradient(135deg, rgba(240,255,245,1) 25%, rgba(229,255,237,1) 50%, rgba(208,255,223,1) 75%, rgba(189,255,208,1) 100%)",
     description:
       "Enhance communication and optimize your team’s performance with tailored software for your needs.",
-    figureBgColor: "rgb(158, 148, 215)",
+    figureBgColor: "rgba(189,255,208,1)",
   },
   {
+    title: "Streamline Your Workflow",
     image: women,
     backgroundColor:
-      "linear-gradient(60deg, #5504e0, 25%, #6445ff, 75%, #7869f3)",
+      "linear-gradient(135deg, rgba(236,255,254,1) 25%, rgba(224,255,253,1) 50%, rgba(204,255,252,1) 75%, rgba(187,255,251,1) 100%)",
     description:
       "Join us on a journey to transform your ideas into reality and elevate your digital presence to new heights.",
-    figureBgColor: "rgb(188, 178, 245)",
+    figureBgColor: "#b4fffa",
   },
   {
+    title: "Unlock Your Potential",
     image: man,
     backgroundColor:
-      "linear-gradient(60deg, #4d0070, 25%, #800080, 75%, #b300b3)",
+      "linear-gradient(135deg, rgba(232,255,247,1) 25%, rgba(204,255,237,1) 50%, rgba(194,255,234,1) 75%, rgba(134,255,212,1) 100%)",
     description:
       "Automate your processes and scale your business efficiently with our innovative software solutions.",
-    figureBgColor: "rgb(218, 178, 235)",
+    figureBgColor: "#8ce3c4",
   },
 ];
 

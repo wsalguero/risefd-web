@@ -1,21 +1,81 @@
+/* Ordenado y mejorado para móviles en modo paisaje */
 .presentation__container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 25px;
   background: linear-gradient(60deg, #5d06fd, 25%, #6026ff, 75%, #7b66f3);
   border-radius: 18% 82% 100% 0% / 0% 0% 100% 100%;
+  box-shadow: 6px 6px 29px #dedede, -6px -6px 29px #e2e2e2;
+  padding-top: 2rem;
+  height: auto;
+  padding-top: 7%;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    gap: 15px;
+    padding: 1rem;
+    padding-top: 6rem;
+    justify-content: center;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
+    padding-top: 25%;
     gap: 20px;
+  }
+}
+
+.textAndSpan__container {
+  @media (max-width: 1024px) and (orientation: landscape) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Esto centra los elementos verticalmente si el contenedor es más alto */
+    margin: auto;
+    width: 100%;
+  }
+}
+
+.presentationImage__container {
+  @media (max-width: 1024px) and (orientation: landscape) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+.presentation__container div {
+  @media (max-width: 1024px) and (orientation: landscape) {
+    width: 50% !important;
+  }
+}
+.presentationText__element {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  gap: 10px;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    width: 50%;
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
   }
 }
 
 .presentationText__element h1 {
   font-size: 6vh;
   font-weight: 500;
-  color: #f7f7f7;
+  color: #2b2b2b;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    font-size: 4vh;
+  }
 
   @media (max-width: 768px) {
     font-size: 3vh;
@@ -27,26 +87,13 @@
   font-weight: 400;
   color: #afafaf;
 
+  @media (max-width: 1024px) and (orientation: landscape) {
+    font-size: 1.8vh;
+  }
+
   @media (max-width: 768px) {
     font-size: 1.8vh;
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-}
-
-.presentationText__element {
-  display: flex;
-  flex-direction: column;
-  width: 915px;
-  height: auto;
-  justify-content: center;
-  gap: 10px;
-
-  @media (max-width: 768px) {
-    height: 200px;
-    width: 100%;
-    text-align: center;
-    align-items: center;
+    margin: 0 25px;
   }
 }
 
@@ -54,8 +101,19 @@
   height: auto;
   background-color: rgb(178, 168, 235);
   border-radius: 84% 16% 91% 9% / 50% 49% 51% 50%;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    width: 40%;
+  }
+
   @media (max-width: 768px) {
-    width: 300px;
+    width: 100%;
+    padding: 0 25px;
+  }
+
+  .presentationImage__element img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -65,16 +123,31 @@
   align-items: center;
   gap: 10px;
   margin-top: 5%;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    justify-content: start;
+  }
 }
 
 .changeBannerColor__container span {
   margin: 5px;
   width: 15px;
   height: 15px;
-  background-color: #ffffff49;
+  background-color: #083d37;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   border-radius: 50%;
+
+  @media (max-width: 768px) {
+    width: 8px;
+    height: 8px;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    width: 8px;
+    height: 8px;
+    margin: 2px;
+  }
 }
 
 .active__span {
@@ -83,20 +156,20 @@
   box-shadow: 32px 32px 79px #a7a7a7, -32px -32px 79px #ffffff;
 }
 
+.animated-image {
+  transition: transform 0.5s ease-in-out;
+  animation: slideIn 0.5s ease-in-out;
+}
+
 @keyframes slideIn {
   0% {
-    margin-top: 20px; /* En lugar de usar translateY, usa margin */
+    margin-top: 10px; /* En lugar de usar translateY, usa margin */
     opacity: 0;
   }
   100% {
     margin-top: 0;
     opacity: 1;
   }
-}
-
-.animated-image {
-  transition: transform 0.5s ease-in-out;
-  animation: slideIn 0.5s ease-in-out;
 }
 
 /*Mision y vision*/
@@ -170,10 +243,6 @@
   }
 }
 
-.animated_banner {
-  animation: slideBanner 0.6s ease-out;
-  transition: transform 0.5s ease-in-out;
-}
 /**/
 .innovativeSection {
   margin-bottom: 25px;
