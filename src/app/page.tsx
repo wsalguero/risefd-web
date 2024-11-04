@@ -103,7 +103,7 @@ export default function Home() {
           </figure>
         </div>
       </section>
-      <section className="flow-banner-section" ref={flowBannerRef}>
+      <section className="flow-banner-section md:mt-24" ref={flowBannerRef}>
         <div className="flow-banner__tittle lg:pt-8 text-center">
           <h2 className="flow-banner__heading">
             Maximize Your Business Potential with Smart Software Solutions

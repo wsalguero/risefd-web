@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaCode, FaCloud, FaBullhorn } from "react-icons/fa";
+import { FaBars, FaTimes, FaCode, FaCloud, FaBullhorn, FaLaptopCode, FaMobileAlt, FaDesktop, FaClosedCaptioning, FaCloudscale, FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
 import "./nav.css";
 import { BiDownArrow } from "react-icons/bi";
@@ -16,23 +16,24 @@ const navLinksObj = [
 const servicesSubmenu = [
     {
         title: "Custom Development", icon: <FaCode />, path: "/services/custom-development",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro voluptatum perspiciatis distinctio beatae nesciunt atque, non veritatis ducimus provident, amet corporis, illum dolorum! Consequatur nulla possimus voluptatum quia asperiores!",
-
+        description: "Tailored software solutions to meet your unique business needs.",
+        customClass: "customDev__li",
         submenu: [
-            { title: "Web Development", icon: <FaCode />, path: "/services/custom-development/web-development" },
-            { title: "Mobile Development", icon: <FaCode />, path: "/services/custom-development/mobile-development" },
-            { title: "Game Development", icon: <FaCode />, path: "/services/custom-development/game-development" },
+            { title: "Web Development", icon: <FaLaptopCode />, path: "/services/custom-development/web-development" },
+            { title: "Mobile Development", icon: <FaMobileAlt />, path: "/services/custom-development/mobile-development" },
+            { title: "Desktop Development", icon: <FaDesktop />, path: "/services/custom-development/desktop-development" },
         ],
     },
     {
         title: "SaaS Solutions", icon: <FaCloud />, path: "/services/saas-solutions",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro voluptatum perspiciatis distinctio beatae nesciunt atque, non veritatis ducimus provident, amet corporis, illum dolorum! Consequatur nulla possimus voluptatum quia asperiores!",
+        description: "Cloud-based platforms to boost your business efficiency.",
     },
     {
         title: "Digital Marketing", icon: <FaBullhorn />, path: "/services/digital-marketing",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro voluptatum perspiciatis distinctio beatae nesciunt atque, non veritatis ducimus provident, amet corporis, illum dolorum! Consequatur nulla possimus voluptatum quia asperiores!",
+        description: "Drive growth with innovative digital marketing strategies.",
     },
 ];
+
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,9 +54,12 @@ const Nav = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0); // Inicializado en 0 para evitar problemas en SSR
     const [visible, setVisible] = useState(true);
 
+    const [pageName, setPageName] = useState("");
+
     useEffect(() => {
         // Verifica si `window` está disponible antes de acceder a él
         if (typeof window !== "undefined") {
+
             const handleResize = () => {
                 const screenWidth = window.innerWidth;
                 setIsMobile(screenWidth <= 768);
@@ -66,7 +70,7 @@ const Nav = () => {
                 if (!isMobile) {
                     setVisible(prevScrollPos > currentScrollPos);
                 } else {
-                    setVisible(true); // Mantener siempre visible en dispositivos móviles
+                    setVisible(true);
                 }
                 setPrevScrollPos(currentScrollPos);
             };
@@ -74,14 +78,25 @@ const Nav = () => {
             window.addEventListener("resize", handleResize);
             window.addEventListener("scroll", handleScroll);
 
+            // const currentPath = location.pathname.toString();
+
+            // // Encuentra el objeto que coincide con la ruta actual
+            // const currentPage = navLinksObj.find(navItem => navItem.path === currentPath);
+
+            // // Si se encuentra una coincidencia, establece el título
+            // if (currentPage) {
+            //     setPageName(currentPage.title);
+            // }
+
             // Limpieza de eventos al desmontar el componente
             return () => {
                 window.removeEventListener("resize", handleResize);
                 window.removeEventListener("scroll", handleScroll);
             };
-        }
-    }, [prevScrollPos, isMobile]);
 
+
+        }
+    }, [prevScrollPos, isMobile, pageName]);
 
     return (
         <nav className="nav__element"
@@ -94,11 +109,20 @@ const Nav = () => {
                 zIndex: 1000,
             }}>
             <div className="logoNav__container">
-                <Image src={Logo} alt="Logo Navbar" />
-                <Link href={"/"}>
-                    <label htmlFor="logo-navBrand">Rise FD</label>
+                <Link href={"/"} className="p-2 rounded">
+                    <figure>
+                        <Image
+                            src={Logo}
+                            alt="Logo Navbar"
+                            className="logo_img"
+                        />
+                    </figure>
+                    <span>
+                        <label htmlFor="logo-navBrand">Rise FD</label>
+                    </span>
                 </Link>
             </div>
+
 
             <ul className={`listNav__element ${isMenuOpen ? "block" : "hidden"} md:flex md:flex-row`}>
                 <li
@@ -119,48 +143,83 @@ const Nav = () => {
                             onMouseEnter={() => setHoveringMenu(true)}
                             onMouseLeave={() => setHoveringMenu(false)}
                         >
-                            <section className="submenu mt-2">
-                                <ul className="top-full left-0 bg-white text-black shadow-lg rounded-md">
+                            {!isMobile && (<section className="submenu mt-2">
+                                <ul className="top-full left-0 rounded-md">
+
                                     {servicesSubmenu.map((service, index) => (
-                                        <li key={index} className="px-6 py-4 hover:bg-gray-100 flex items-center submenu__item">
-                                            <div className="service__container flex flex-row items-center justify-between">
-                                                <div className="flex flex-col">
-                                                    <span className="service__title text-lg font-semibold text-gray-800">{service.title}</span>
-                                                    <p className="service__description text-sm text-gray-500 mt-2">
+                                        <li key={index} className="px-6 py-4 flex items-start submenu__item">
+                                            <div>
+                                                <span className="submenu__linkContainer">
+                                                    <Link href={service.path} className={`hover:text-blue-400 transition submenu__link ${service.customClass}`}>
+                                                        <div className="submenu__linkContainerChild">
+                                                            <div className="icon-container">
+                                                                {service.icon}
+                                                            </div>
+                                                            <span className="service-title">{service.title}</span>
+                                                        </div>
+                                                    </Link>
+                                                    <p className="submenu__p">
                                                         {service.description}
                                                     </p>
-                                                </div>
-                                                <div className="service__iconContainer flex items-center justify-center bg-gray-200 rounded-full p-3">
-                                                    <Link href={service.path} className="text-gray-600 hover:text-gray-800">
-                                                        {service.icon}
-                                                    </Link>
-                                                </div>
+                                                </span>
+                                                {service.submenu && (
+                                                    <div className="submenu__container">
+                                                        <ul className="submenu__list ">
+                                                            {service.submenu.map((submenuItem, subindex) => (
+                                                                <li key={subindex} className="submenu__item">
+                                                                    <Link href={submenuItem.path} className="hover:text-blue-400 transition submenu-link-item">
+                                                                        <div className="submenu_link_item_container">
+                                                                            {submenuItem.icon}
+                                                                        </div>
+                                                                    </Link>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                )}
                                             </div>
                                         </li>
                                     ))}
+
                                 </ul>
-                            </section>
+
+                            </section>)}
+
                         </div>
                     )}
                 </li>
 
                 {navLinksObj.map((item, index) => (
                     <li key={index} className="list__Item md:px-6 mx-2 py-2 md:py-0">
-                        <Link href={item.path} className="hover:text-blue-500 transition">
+                        <Link href={item.path} className="hover:text-blue-500 transition" onClick={() => setPageName(item.title)}>
                             {item.title}
                         </Link>
                     </li>
                 ))}
             </ul>
 
-            <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="menuMobile__button inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg focus:outline-none transition-transform duration-300"
-                aria-controls="navbar"
-                aria-expanded={isMenuOpen}
-            >
-                {isMenuOpen ? <FaTimes className="w-5 h-5" /> : <FaBars className="w-5 h-5" />}
-            </button>
+            {isMobile && (
+
+                <div className="startNav__buttonContainer">
+                    <Link href={"/contact"} className="ctaTalk-button px-8 py-4 bg-white text-indigo-800 font-semibold rounded-md shadow-lg hover:bg-indigo-700 hover:text-white transition-all duration-300 hover:scale-105">
+                        Start Your Journey
+                    </Link>
+                </div>
+            )}
+
+            {!isMobile && (
+                <>
+                    <button
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="menuMobile__button inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg focus:outline-none transition-transform duration-300"
+                        aria-controls="navbar"
+                        aria-expanded={isMenuOpen}
+                    >
+                        {isMenuOpen ? <FaTimes className="w-5 h-5" /> : <FaBars className="w-5 h-5" />}
+                    </button>
+                </>
+            )}
+
         </nav>
     );
 };

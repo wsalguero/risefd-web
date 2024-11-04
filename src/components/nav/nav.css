@@ -1,12 +1,12 @@
 :root {
   --navTextColor: #ffffff;
-  --navBackground: #3e007a;
-  --navHoverColor: #c084fc;
+  --navBackground: #340166;
+  --navHoverColor: #2d0158;
 }
 
 .nav__element {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px 50px;
   background-color: var(--navBackground);
@@ -20,13 +20,8 @@
 }
 
 .nav__element:hover {
-  background-color: #370569; /* Darker purple on hover */
+  background-color: var(--navHoverColor); /* Darker purple on hover */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6), 0 3px 6px rgba(255, 255, 255, 0.2); /* Intensifying the shadow */
-}
-
-.logoNav__container a {
-  display: flex;
-  align-items: center;
 }
 
 .listNav__element {
@@ -56,10 +51,11 @@
 }
 
 .submenu {
-  background-color: #18122b;
   padding: 10px;
   height: auto;
   width: 450px;
+  background-color: #26014b;
+  color: var(--navTextColor);
 }
 /* Ensuring the entire li triggers the hover, not just the text inside */
 .services_li:hover {
@@ -89,23 +85,6 @@
 .submenu__item {
   padding: 10px 20px;
   white-space: nowrap;
-  background-color: #ffffff;
-}
-
-.submenu__item a {
-  text-decoration: none;
-  color: var(--navTextColor);
-  font-weight: 400;
-}
-
-.submenu__item a:hover {
-  color: var(--navHoverColor);
-}
-
-.service__container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 .logoNav__container label {
@@ -114,6 +93,17 @@
   color: #fff;
   text-shadow: 0px 0px 10px rgba(200, 132, 252, 0.8);
   cursor: pointer;
+}
+.logoNav__container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d0231;
+}
+
+.logo_img {
+  width: 50px !important;
+  height: auto;
 }
 
 .menuMobile__button {
@@ -146,12 +136,6 @@
     animation: fadeIn 0.3s ease-in-out;
   }
 
-  .logoNav__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   .menuMobile__button {
     display: block;
     position: absolute;
@@ -170,52 +154,77 @@
   }
 }
 
-/* Title of the service */
-.service__title {
-  color: #333;
-  font-size: 1.125rem; /* 18px */
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+.submenu__link p {
+  font-weight: 500;
+  margin-right: 10px;
+  color: #b3b3b3;
+  line-height: 1.5;
 }
 
-/* Description of the service */
-.service__description {
-  color: #6b7280; /* Tailwind's gray-500 */
-  font-size: 0.875rem; /* 14px */
-  line-height: 1.4;
+.submenu__linkContainer {
+  gap: 10px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
 }
 
-/* Icon container */
-.service__iconContainer {
-  background-color: #e5e7eb; /* Light gray background for the icon */
+.submenu__linkContainerChild {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  padding-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+
+.submenu__linkContainerChild:hover {
+  transform: translateX(5px);
+}
+
+.submenu__p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.submenu__container {
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.submenu__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.submenu__item {
+  list-style: none;
+}
+
+.submenu-link-item {
+  align-items: start;
+  color: #aaa;
+}
+
+.submenu-link-item:hover {
+  color: #00aaff;
+}
+
+.icon-container {
+  background-color: #4a4a4a;
   padding: 8px;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
 }
 
-.service__iconContainer:hover {
-  background-color: #d1d5db; /* Slightly darker gray on hover */
+.service-title {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-/* Ensuring the entire submenu is responsive */
-@media (max-width: 768px) {
-  .submenuServices__Container {
-    width: 100%; /* Full width on mobile */
-  }
-
-  .submenu__item {
-    padding: 15px 10px; /* More padding for touch devices */
-  }
-
-  .service__title {
-    font-size: 1rem; /* Smaller font on mobile */
-  }
-
-  .service__description {
-    font-size: 0.75rem; /* Smaller description */
-  }
-
-  .service__iconContainer {
-    padding: 6px;
-  }
+.submenu_link_item_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
