@@ -6,7 +6,7 @@ import flowBannerMobil from "@/assets/images/home/flowBannerMobil.png";
 import textImg from "@/assets/images/home/img.png";
 import { useEffect, useRef, useState } from "react";
 import { FaUser } from "react-icons/fa";
-import { mainServices, objTestimonials, presentations } from "@/consts";
+import { mainServices, objTestimonials, presentations } from "@/constants/consts";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
 
 
@@ -102,6 +102,68 @@ export default function Home() {
                 className={`animated-image`} // Keep the slideIn class for animation
               />
             </figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="benefits__Sections">
+
+      </section>
+
+      <section className="flow-banner-section md:mt-24" ref={flowBannerRef}>
+        <div className="flow-banner__tittle lg:pt-8 text-center">
+          <h2 className="flow-banner__heading">
+            Maximize Your Business Potential with Smart Software Solutions
+          </h2>
+          <p className="flow-banner__paragraph">
+            From automating repetitive tasks to enhancing decision-making, our tailored software
+            solutions streamline processes, boost productivity, and help your business grow
+            efficiently.
+          </p>
+        </div>
+        <div className="flow-banner-container banner__columns2">
+          {isMobile && !isLandscape ? (
+            <Image
+              src={flowBannerMobil}
+              alt="flowchart banner mobil img"
+              className="flow-banner-image animated_banner"
+              layout="responsive"
+              width={1200}
+              height={600}
+            />
+          ) : (
+            <Image
+              src={flowBanner}
+              alt="flowchart banner img"
+              className="flow-banner-image animated_banner"
+              layout="responsive"
+              width={1200}
+              height={600}
+            />
+          )}
+        </div>
+      </section>
+
+      <section className="ctaTalk__Section md:py-24 md:mx-24 md:my-8 bg-gradient-to-r from-purple-600 to-indigo-800 text-white rounded-lg shadow-lg">
+        <div className="ctaTalk__container flex flex-col md:flex-row justify-between items-center p-8">
+          <div className="text-container flex-1 space-y-6 md:space-y-8">
+            <h2 className="text-3xl md:text-4xl font-bold leading-relaxed">
+              Do you have a vision for your next big project?
+            </h2>
+            <p className="text-lg md:text-xl font-light">
+              Let's bring it to life with innovative solutions tailored to your needs. Get in touch with us to start your journey.
+            </p>
+          </div>
+
+          <div className="image-container flex flex-col justify-center items-center space-y-6 md:space-y-8">
+            <div className="image_bg image-wrapper" >
+              <Image alt="text info" src={textImg} className="rounded-lg" />
+            </div>
+            <a href="/contact">
+              <button className="ctaTalk-button px-8 py-4 bg-white text-indigo-800 font-semibold rounded-md shadow-lg hover:bg-indigo-700 hover:text-white transition-all duration-300 hover:scale-105">
+                Start Your Journey
+              </button>
+            </a>
           </div>
         </div>
       </section>

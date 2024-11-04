@@ -1,6 +1,7 @@
 import women from "@/assets/images/home/women.webp";
 import womenandMen from "@/assets/images/home/wym.png";
 import man from "@/assets/images/home/man.png";
+import { FiBarChart, FiShield, FiUsers, FiZap } from "react-icons/fi";
 
 export const presentations = [
   {
@@ -78,5 +79,40 @@ export const mainServices = [
     icon: "",
     title: "Digital Marketing",
     text: "We optimize your company's digital presence through digital marketing strategies that drive your online growth.",
+  },
+];
+
+export const benefits = [
+  {
+    title: "Reliable Performance",
+    icon: FiShield,
+    description:
+      "Engineered for exceptional stability and high data traffic, ensuring your software runs seamlessly.",
+    iconPosition: "left",
+    delay: 0.6,
+  },
+  {
+    title: "Scalable Solutions",
+    icon: FiBarChart,
+    description:
+      "Adaptable to your business growth, our solutions scale effortlessly to meet increasing demands.",
+    iconPosition: "left",
+    delay: 0.8,
+  },
+  {
+    title: "User-Centric Design",
+    icon: FiUsers,
+    description:
+      "Intuitive interfaces and user-friendly experiences that cater to both small and large enterprises.",
+    iconPosition: "left",
+    delay: 1,
+  },
+  {
+    title: "High Efficiency",
+    icon: FiZap,
+    description:
+      "Optimized to reduce development overhead while maintaining robust functionality and speed.",
+    iconPosition: "left",
+    delay: 1.1,
   },
 ];

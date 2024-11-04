@@ -206,7 +206,7 @@
 
 .flow-banner__heading {
   font-size: 4vh;
-  color: #6f33df;
+  color: #100c4b;
   font-weight: 700;
   margin-bottom: 10px;
 
@@ -288,6 +288,7 @@
 .image_bg {
   border-radius: 62% 38% 22% 78% / 48% 36% 64% 52%;
   display: block;
+  background-color: #6251fc;
 }
 
 .image-wrapper {
@@ -320,6 +321,12 @@
   align-items: center;
   gap: 20px;
 }
+
+.text-container h2,
+.text-container p {
+  color: #ffffff !important;
+}
+
 @media (max-width: 768px) {
   .innovativeSection {
     flex-direction: column;
@@ -531,7 +538,6 @@
 }
 
 .ctaTalk__Section {
-  background-image: linear-gradient(to right, #6a00f4, #3e00b3);
   color: white;
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);

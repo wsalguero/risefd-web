@@ -1,5 +1,5 @@
 "use client"
-import { presentations } from '@/consts';
+import { presentations } from '@/constants/consts';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react'
 import "./services.css"
