@@ -172,6 +172,300 @@
   }
 }
 
+/**/
+
+.benefits__Section {
+  margin-top: 75px;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
+}
+
+.benefits__container {
+  display: flex;
+  gap: 25px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    gap: 30px;
+  }
+}
+
+.benef__IndividualContainer {
+  width: 25%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    width: 200px !important;
+    height: 300px;
+  }
+}
+
+.benefits__IconElement {
+  width: 25px; /* Ajusta el tamaño según sea necesario */
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #0000001e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+
+.benefits__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    height: 50px;
+  }
+}
+
+.benefits__description {
+  color: #333333;
+  text-wrap: wrap;
+}
+
+.benefits__container {
+  @media (max-width: 768px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+/**/
+
+/**/
+.ceoText__section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 250px;
+  margin-top: 100px;
+  gap: 50px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    height: 300px;
+  }
+}
+.ceoText__container {
+  width: 25%;
+  height: 100%;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 50%;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    width: 200px !important;
+    height: 300px;
+  }
+}
+
+.ceoText__card {
+  background: linear-gradient(
+    135deg,
+    rgba(188, 255, 221, 1) 20%,
+    /* Verde claro */ rgba(232, 255, 241, 1) 80%
+  );
+  padding: 20px;
+  border-radius: 12px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    width: 110% !important;
+  }
+}
+
+.ceoCard__header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    gap: 5px;
+  }
+}
+
+.ceoCard__icon {
+  width: 50px;
+  font-size: 30px; /* Tamaño más grande para destacar */
+  color: #2b7a78; /* Verde oscuro para contraste */
+  @media (max-width: 1024px) and (orientation: landscape) {
+    font-size: 20px;
+    width: 25px;
+  }
+}
+
+.ceoName__Element h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2f2f2f;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    font-size: 15px;
+  }
+}
+
+.ceoName__Element p {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #4a4a4a;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    font-size: 11px;
+  }
+}
+
+.ceoText__paragraph {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #2f2f2f;
+  margin-top: 8px;
+  font-style: italic;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    font-size: 12px;
+  }
+}
+
+.tabWithLogo__Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 250px;
+  padding: 20px;
+  background: linear-gradient(135deg, #e3f6f5, #c9e4e7);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  @media (max-width: 768px) {
+    height: 350px;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    height: 300px;
+  }
+}
+
+.tabContent__imageContainer {
+  display: flex;
+  align-items: center;
+}
+
+.tab__MisionVision span > strong {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #144f4d;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    font-size: 18px;
+  }
+}
+
+.tab__MisionVision p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    font-size: 14px;
+  }
+}
+
+.textLogo__element {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+}
+
+.tabContent__container {
+  transition: opacity 0.3s ease-in-out;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabContent__image {
+  width: 150px;
+  height: auto;
+}
+
+.tabContent__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  height: 100%;
+}
+
+.tabButtons__container {
+  display: flex;
+  gap: 10px;
+}
+
+.tabButton {
+  padding: 8px 12px;
+  background-color: #a7d6d0;
+  color: #2f2f2f;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.tabButton:hover {
+  background-color: #76b4ac;
+  transform: translateY(-2px);
+}
+
+.activeTab {
+  background-color: #56a19a;
+  color: #fff;
+  font-weight: bold;
+}
+
+/**/
+
 /*Mision y vision*/
 
 .flow-banner-section {
@@ -338,38 +632,6 @@
     width: 100%;
   }
 }
-
-/**/
-
-.benefits__container {
-  display: flex;
-  gap: 20px;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-}
-.benefits__IconElement {
-  width: 25px; /* Ajusta el tamaño según sea necesario */
-  height: 25px;
-  border-radius: 50%;
-  border: 2px solid #0000001e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.benefits__title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.benefits__description {
-  color: #333333;
-  text-wrap: wrap;
-}
-/**/
 
 .mainServices__section {
   height: 100%;
