@@ -2,6 +2,68 @@ import women from "@/assets/images/home/women.webp";
 import womenandMen from "@/assets/images/home/wym.png";
 import man from "@/assets/images/home/man.png";
 import { FiBarChart, FiShield, FiUsers, FiZap } from "react-icons/fi";
+import {
+  FaBullhorn,
+  FaCloud,
+  FaCode,
+  FaDesktop,
+  FaLaptopCode,
+  FaMobileAlt,
+} from "react-icons/fa";
+import { RiRobot2Line } from "react-icons/ri";
+
+export const navLinksObj = [
+  { title: "Products", path: "/products" },
+  { title: "About us", path: "/about-us" },
+  { title: "Contact", path: "/contact" },
+];
+
+export const servicesSubmenu = [
+  {
+    title: "Custom Development",
+    icon: FaCode,
+    path: "/services/custom-development",
+    description:
+      "Development of web, desktop and mobile software according to your needs",
+    customClass: "customDev__li",
+    submenu: [
+      {
+        title: "Web Development",
+        icon: FaLaptopCode,
+        path: "/services/custom-development/web-development",
+      },
+      {
+        title: "Mobile Development",
+        icon: FaMobileAlt,
+        path: "/services/custom-development/mobile-development",
+      },
+      {
+        title: "Desktop Development",
+        icon: FaDesktop,
+        path: "/services/custom-development/desktop-development",
+      },
+    ],
+  },
+  {
+    title: "SaaS Solutions",
+    icon: FaCloud,
+    path: "/services/saas-solutions",
+    description: "Cloud-based platforms to boost your business efficiency.",
+  },
+  {
+    title: "Digital Marketing",
+    icon: FaBullhorn,
+    path: "/services/digital-marketing",
+    description: "Drive growth with innovative digital marketing strategies.",
+  },
+  {
+    title: "AI Integrations",
+    icon: RiRobot2Line,
+    path: "/services/ia-integrations",
+    description:
+      "Enable AI capabilities to improve your business processes and drive growth.",
+  },
+];
 
 export const presentations = [
   {
@@ -88,31 +150,23 @@ export const benefits = [
     icon: FiShield,
     description:
       "Engineered for exceptional stability and high data traffic, ensuring your software runs seamlessly.",
-    iconPosition: "left",
-    delay: 0.6,
   },
   {
     title: "Scalable Solutions",
     icon: FiBarChart,
     description:
       "Adaptable to your business growth, our solutions scale effortlessly to meet increasing demands.",
-    iconPosition: "left",
-    delay: 0.8,
   },
   {
     title: "User-Centric Design",
     icon: FiUsers,
     description:
       "Intuitive interfaces and user-friendly experiences that cater to both small and large enterprises.",
-    iconPosition: "left",
-    delay: 1,
   },
   {
     title: "High Efficiency",
     icon: FiZap,
     description:
       "Optimized to reduce development overhead while maintaining robust functionality and speed.",
-    iconPosition: "left",
-    delay: 1.1,
   },
 ];

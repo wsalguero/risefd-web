@@ -341,6 +341,36 @@
 
 /**/
 
+.benefits__container {
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+.benefits__IconElement {
+  width: 25px; /* Ajusta el tamaño según sea necesario */
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #0000001e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.benefits__description {
+  color: #333333;
+  text-wrap: wrap;
+}
+/**/
+
 .mainServices__section {
   height: 100%;
   display: flex;

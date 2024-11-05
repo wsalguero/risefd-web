@@ -1,38 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createElement } from "react";
 import { FaBars, FaTimes, FaCode, FaCloud, FaBullhorn, FaLaptopCode, FaMobileAlt, FaDesktop, FaClosedCaptioning, FaCloudscale, FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
 import "./nav.css";
 import { BiDownArrow } from "react-icons/bi";
 import Image from "next/image";
 import Logo from "@/assets/images/logos/logoKame.png";
-
-const navLinksObj = [
-    { title: "Products", path: "/products" },
-    { title: "About us", path: "/about-us" },
-    { title: "Contact", path: "/contact" },
-];
-
-const servicesSubmenu = [
-    {
-        title: "Custom Development", icon: <FaCode />, path: "/services/custom-development",
-        description: "Development of web, desktop and mobile software according to your needs",
-        customClass: "customDev__li",
-        submenu: [
-            { title: "Web Development", icon: <FaLaptopCode />, path: "/services/custom-development/web-development" },
-            { title: "Mobile Development", icon: <FaMobileAlt />, path: "/services/custom-development/mobile-development" },
-            { title: "Desktop Development", icon: <FaDesktop />, path: "/services/custom-development/desktop-development" },
-        ],
-    },
-    {
-        title: "SaaS Solutions", icon: <FaCloud />, path: "/services/saas-solutions",
-        description: "Cloud-based platforms to boost your business efficiency.",
-    },
-    {
-        title: "Digital Marketing", icon: <FaBullhorn />, path: "/services/digital-marketing",
-        description: "Drive growth with innovative digital marketing strategies.",
-    },
-];
+import { navLinksObj, servicesSubmenu } from "@/constants/consts";
 
 
 const Nav = () => {
@@ -158,7 +132,7 @@ const Nav = () => {
                                                         <Link href={service.path} className={`hover:text-blue-400 transition submenu__link ${service.customClass}`}>
                                                             <div className="submenu__linkContainerChild">
                                                                 <div className="icon-container">
-                                                                    {service.icon}
+                                                                    {createElement(service.icon)}
                                                                 </div>
                                                                 <span className="service-title">{service.title}</span>
                                                             </div>
@@ -174,7 +148,7 @@ const Nav = () => {
                                                                     <li key={subindex} className="submenu__item">
                                                                         <Link href={submenuItem.path} className="hover:text-blue-400 transition submenu-link-item">
                                                                             <div className="submenu_link_item_container">
-                                                                                {submenuItem.icon}
+                                                                                {createElement(submenuItem.icon)}
                                                                             </div>
                                                                         </Link>
                                                                     </li>

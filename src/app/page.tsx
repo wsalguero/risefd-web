@@ -4,10 +4,13 @@ import "./home.css";
 import flowBanner from "@/assets/images/home/flowBanner.png";
 import flowBannerMobil from "@/assets/images/home/flowBannerMobil.png";
 import textImg from "@/assets/images/home/img.png";
-import { useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { FaUser } from "react-icons/fa";
-import { mainServices, objTestimonials, presentations } from "@/constants/consts";
+import { benefits, mainServices, objTestimonials, presentations } from "@/constants/consts";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
+import { Icon } from "next/dist/lib/metadata/types/metadata-types";
+import { IconType } from "react-icons";
+import React from "react";
 
 
 export default function Home() {
@@ -106,9 +109,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="benefits__Sections">
+      <section className="benefits__Section md:px-24 md:mt-24">
+        <div className="benefits__container">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="px-20 pt-8">
+              <div className="benefits__IconContainer" id={`benef-${index}`}>
+                <span
+                  className="benefits__IconElement md:mb-3"
+                  style={{ backgroundColor: presentations[activeIndex].figureBgColor }}
+                >
+                  {React.createElement(benefit.icon)}
+                </span>
 
+              </div>
+              <div className="benefits__textContainer">
+                <h2 className="benefits__title">{benefit.title}</h2>
+                <p className="benefits__description">
+                  {benefit.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
+
 
       <section className="flow-banner-section md:mt-24" ref={flowBannerRef}>
         <div className="flow-banner__tittle lg:pt-8 text-center">
