@@ -1,0 +1,23 @@
+.footer-section {
+  background-color: #d8f5d1;
+  color: #333;
+}
+
+.footer-section a:hover {
+  color: #555;
+}
+
+.footer-contact-info div,
+.footer-social-icons a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-info div:hover,
+.footer-social-icons a:hover {
+  color: #1b7f45;
+}
+
+.footer-section .container {
+  max-width: 1200px;
+}
