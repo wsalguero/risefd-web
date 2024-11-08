@@ -1,5 +1,11 @@
 .footer-section {
-  background-color: #d8f5d1;
+  background: linear-gradient(
+    135deg,
+    rgba(232, 255, 247, 1) 25%,
+    rgba(204, 255, 237, 1) 50%,
+    rgba(194, 255, 234, 1) 75%,
+    rgba(134, 255, 212, 1) 100%
+  );
   color: #333;
 }
 

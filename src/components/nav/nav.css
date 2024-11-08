@@ -218,9 +218,11 @@
 }
 
 .icon-container {
-  background-color: #97f5c175;
   padding: 8px;
-  border-radius: 50%;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  color: #43a56c !important;
 }
 
 .service-title {

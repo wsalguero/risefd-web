@@ -4,9 +4,9 @@ import "./home.css";
 import flowBanner from "@/assets/images/home/flowBanner.png";
 import flowBannerMobil from "@/assets/images/home/flowBannerMobil.png";
 import textImg from "@/assets/images/home/img.png";
-import { ReactNode, useEffect, useRef, useState } from "react";
-import { FaBullseye, FaLightbulb, FaStar, FaTree, FaUser } from "react-icons/fa";
-import { benefits, mainServices, objTestimonials, presentations } from "@/constants/consts";
+import { createElement, ReactNode, useEffect, useRef, useState } from "react";
+import { FaArrowLeft, FaArrowRight, FaBullseye, FaLightbulb, FaStar, FaTree, FaUser } from "react-icons/fa";
+import { benefits, mainServices, objTestimonials, presentations, services } from "@/constants/consts";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
 import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import { IconType } from "react-icons";
@@ -162,6 +162,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <div className="md:px-20">
         <section className="benefits__Section md:px-24 px-12">
           <div className="benefits__container">
@@ -227,6 +228,7 @@ export default function Home() {
           </div>
         </section>
 
+
         <section className="flow-banner-section md:mt-24" ref={flowBannerRef}>
           <div className="flow-banner__tittle lg:pt-8 text-center">
             <h2 className="flow-banner__heading">
@@ -261,31 +263,101 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="services__section md:px-24 px-12">
+          <h2 className="services__heading">
+            Our services
+          </h2>
 
 
-        <section className="ctaTalk__Section md:py-24 md:mx-24 md:my-8 bg-gradient-to-r from-purple-600 to-indigo-800 text-white rounded-lg shadow-lg">
-          <div className="ctaTalk__container flex flex-col md:flex-row justify-between items-center p-8">
-            <div className="text-container flex-1 space-y-6 md:space-y-8">
-              <h2 className="text-3xl md:text-4xl font-bold leading-relaxed">
-                Do you have a vision for your next big project?
-              </h2>
-              <p className="text-lg md:text-xl font-light">
-                Let's bring it to life with innovative solutions tailored to your needs. Get in touch with us to start your journey.
-              </p>
-            </div>
-
-            <div className="image-container flex flex-col justify-center items-center space-y-6 md:space-y-8">
-              <div className="image_bg image-wrapper" >
-                <Image alt="text info" src={textImg} className="rounded-lg" />
+          <div className="px-12 md:px-0 services__container">
+            {services.map((serv, index) => (
+              <div key={index} className="pt-8 serv__IndividualContainer">
+                <div className="serv__textContainer">
+                  <h2 className="serv__title">{!isMobile && serv.title}
+                    <span
+                      className="services__IconElement md:mb-3 "
+                      style={{ backgroundColor: presentations[activeIndex].figureBgColor }}
+                    >
+                      {React.createElement(serv.icon)}
+                    </span>
+                    {isMobile && serv.title}
+                  </h2>
+                  <p className="serv__description">
+                    {serv.description}
+                  </p>
+                </div>
               </div>
-              <a href="/contact">
-                <button className="ctaTalk-button px-8 py-4 bg-white text-indigo-800 font-semibold rounded-md shadow-lg hover:bg-indigo-700 hover:text-white transition-all duration-300 hover:scale-105">
-                  Start Your Journey
-                </button>
-              </a>
+            ))}
+          </div>
+          <a href="/services?view=main" className="services__button">
+            <button className="ctaTalk-button px-8 py-4 bg-white text-green-800 font-semibold rounded-md shadow-lg hover:bg-green-700 hover:text-white transition-all duration-300 hover:scale-105">
+              Start Your Journey
+            </button>
+          </a>
+        </section>
+
+        <section className="mainServices__section py-12 md:mx-24">
+          <div className="flex justify-center items-center mainServices__divChild">
+            <div className="servicesText__container" style={{ background: presentations[activeIndex].backgroundColor }}>
+              <span className="servicesText__Element" >
+                <h2 className="servicesText__heading text-3xl font-bold leading-relaxed pb-4 md:mb-6 text-center">
+                  Our Work Philosophy
+                </h2>
+                <p className="servicesText__paragraph text-gray-600 text-justify">
+                  At Kam3, our approach is rooted in a commitment to collaboration, growth, and security. We work closely with our clients at every stage, ensuring transparency and alignment with their unique goals. Embracing a mindset of continuous improvement, we adapt and evolve with the latest technological advancements to keep our solutions effective and relevant. With a strong focus on security, we prioritize safeguarding our clients' data and operations as they grow, building trusted partnerships based on reliability and innovation.
+                </p>
+
+                <a href="/philosophy" className="flex justify-center items-center space-x-1 hidden">
+                  <span className="mr-1">Read More</span> <FaArrowRight />
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <div className="mainServices__container grid grid-cols-1 md:grid-cols-3 gap-6 px-12 md:px-0">
+            {mainServices.map((service, index) => (
+              <div key={index} className="service-card bg-white rounded-lg shadow-md p-6 text-center hover:scale-105 duration-300">
+                <h3 className="text-xl font-semibold mb-2 servicesText__heading">{service.title}</h3>
+                <p className="text-gray-600 servicesText__pharagra mb-4">{service.text}</p>
+                <div className="icon_Homecontainer mb-4">
+                  {createElement(service.icon)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="testimonials__section py-12 md:mx-24 hidden">
+          <div className="rounded-lg shadow-lg " style={{ backgroundColor: presentations[activeIndex].figureBgColor }}>
+            <h2 className="text-center text-3xl font-bold testimonials__heading mt-4">What Our Clients Say?</h2>
+            <div className="testimonials__divParent px-6 md:px-0 overflow-y-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {objTestimonials.map((testimonial) => (
+                  <div key={testimonial.author} className="p-4">
+                    <div className="bg-white p-9 space-y-3 md:overflow-hidden testimonial_card">
+                      <div>
+                        <FaUser className={`fill-${testimonial.avatar}-500 text-2xl`} />
+                      </div>
+                      <h1 className="font-bold text-xl flex items-center">
+                        {testimonial.author}
+                        <img
+                          src={`https://flagcdn.com/w320/${testimonial.countryFlag}.png`}
+                          alt={`${testimonial.countryFlag} flag`}
+                          className="w-5 h-5 ml-2"
+                        />
+                      </h1>
+                      <span className="text-sm text-gray-400 italic">{testimonial.company}</span>
+                      <p className="text-sm text-zinc-500 leading-6">
+                        "{testimonial.text}"
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
+
       </div>
 
 
